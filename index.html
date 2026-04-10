@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eurotrip 2026 · Talo Family Guide</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eurotrip 2026 · Talo Family Guide</title>
+<style>
     :root{
       --bg:#faf7f2;
       --paper:#fffdf9;
@@ -112,22 +113,8 @@
     .pill-list{display:flex;flex-wrap:wrap;gap:10px}
     .pill{padding:9px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14px}
     .checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;padding:0;margin:0;list-style:none}
-    .checklist li{padding:0;border:none;background:transparent}
-    .check-item{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;background:#fff;border:1px solid var(--line);font-size:14px;cursor:pointer;transition:.2s ease}
-    .check-item:hover{transform:translateY(-1px)}
-    .check-item input{appearance:none;-webkit-appearance:none;width:20px;height:20px;border-radius:6px;border:1.5px solid rgba(87,114,77,.35);background:#fff;display:grid;place-items:center;flex:0 0 auto}
-    .check-item input::after{content:"";width:10px;height:10px;border-radius:3px;background:#57724d;transform:scale(0);transition:.15s ease}
-    .check-item input:checked{background:#eef4ea;border-color:#57724d}
-    .check-item input:checked::after{transform:scale(1)}
-    .check-item span{line-height:1.35}
-    .check-item.done{background:#f6faf3;border-color:rgba(87,114,77,.25)}
-    .stay-card{padding:18px;border-radius:18px;background:#fff;border:1px solid var(--line);margin-bottom:14px}
-    .stay-card h5{margin:0 0 8px;font-size:16px}
-    .stay-card p{margin:0 0 10px}
-    .link-list{display:grid;gap:10px;margin-top:14px}
-    .link-list a{text-decoration:none;padding:10px 12px;border-radius:14px;background:#fff;border:1px solid var(--line);font-size:14px;display:flex;justify-content:space-between;gap:12px}
-    .link-list a::after{content:"↗";opacity:.7}
-    .budget-note{margin-top:12px;font-size:13px;color:var(--muted);line-height:1.55}
+    .checklist li{padding:12px 14px;border-radius:16px;background:#fff;border:1px solid var(--line);font-size:14px}
+    .checklist li::before{content:"✓";display:inline-grid;place-items:center;width:22px;height:22px;margin-right:10px;border-radius:50%;background:#eef4ea;color:#57724d;font-weight:700}
     .budget{display:grid;grid-template-columns:1fr auto;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px}
     .budget:last-child{border-bottom:none}
     .map-wrap{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#f5efe8}
@@ -151,748 +138,643 @@
       .kpis,.checklist,.stat-grid{grid-template-columns:1fr}
       .flight-row,.hotel-row,.city-row{grid-template-columns:1fr}
     }
-  </style>
+  
+    .checklist input[type="checkbox"]{width:16px;height:16px;accent-color:#5b4c40;vertical-align:middle}
+    .day-total{margin:10px 0 0;font-size:14px;color:var(--muted);font-weight:600}
+    .budget a{color:inherit;text-decoration:none;border-bottom:1px dashed rgba(0,0,0,.18)}
+</style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="inner">
-      <div class="brand">
-        <div class="seal">✦</div>
-        <div>
-          <h1>Eurotrip 2026</h1>
-          <p>Guía aesthetic · Valencia, Lisboa, Fátima, París, Lourdes y Roma</p>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="#overview">Resumen</a>
-        <a href="#cities">Ciudades</a>
-        <a href="#notes">Notas útiles</a>
-      </nav>
-    </div>
-  </div>
-
-  <main class="shell">
-    <section class="hero">
-      <div class="hero-grid">
-        <article class="card hero-main">
-          <span class="eyebrow">Primavera 2026 · plan familiar</span>
-          <h2>Un viaje para vivirlo bonito, sin correr.</h2>
-          <p>
+<div class="topbar">
+<div class="inner">
+<div class="brand">
+<div class="seal">✦</div>
+<div>
+<h1>Eurotrip 2026</h1>
+<p>Guía aesthetic · Valencia, Lisboa, Fátima, París, Lourdes y Roma</p>
+</div>
+</div>
+<nav class="nav">
+<a href="#overview">Resumen</a>
+<a href="#cities">Ciudades</a>
+<a href="#notes">Notas útiles</a>
+</nav>
+</div>
+</div>
+<main class="shell">
+<section class="hero">
+<div class="hero-grid">
+<article class="card hero-main">
+<span class="eyebrow">Primavera 2026 · plan familiar</span>
+<h2>Un viaje para vivirlo bonito, sin correr.</h2>
+<p>
             Una guía visual y organizada con vuelos, hoteles, planes por ciudad, presupuestos,
             checklists, mapas y una estructura pensada para disfrutar sin perder tiempo en logística.
             El tono mezcla cultura, momentos espirituales, ratos en familia y bloques realistas para descansar y trabajar.
           </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#overview">Ver visión general</a>
-            <a class="btn" href="#cities">Abrir itinerarios</a>
-          </div>
-          <div class="kpis">
-            <div class="kpi"><strong>6</strong><span>destinos del viaje</span></div>
-            <div class="kpi"><strong>20</strong><span>días planeados</span></div>
-            <div class="kpi"><strong>5</strong><span>alojamientos principales</span></div>
-            <div class="kpi"><strong>∞</strong><span>momentos memorables</span></div>
-          </div>
-        </article>
-        <div class="postcards">
-          <div class="postcard valencia"><div class="city">Inicio</div><h3>Valencia</h3><small>casa, catedral, agua de Valencia, playa</small><div class="iconline">☼ ⛪ 🌊</div></div>
-          <div class="postcard lisboa"><div class="city">Portugal</div><h3>Lisboa + Fátima</h3><small>centro histórico, santuario y velas</small><div class="iconline">🌙 🕯️ ⛪</div></div>
-          <div class="postcard paris"><div class="city">Francia</div><h3>París</h3><small>Torre Eiffel, Notre-Dame, Versalles</small><div class="iconline">🗼 ✨ 🏰</div></div>
-          <div class="postcard lourdes"><div class="city">Espiritual</div><h3>Lourdes</h3><small>gruta, procesiones, Bernadette</small><div class="iconline">🕯️ ⛰️ 💧</div></div>
-          <div class="postcard rome" style="grid-column:1/-1"><div class="city">Gran cierre</div><h3>Roma</h3><small>Vaticano, Pantheon, Coliseo, Asís</small><div class="iconline">🏛️ ✝️ 🍝</div></div>
-        </div>
-      </div>
-    </section>
+<div class="hero-actions">
+<a class="btn primary" href="#overview">Ver visión general</a>
+<a class="btn" href="#cities">Abrir itinerarios</a>
+</div>
+<div class="kpis">
+<div class="kpi"><strong>6</strong><span>destinos del viaje</span></div>
+<div class="kpi"><strong>20</strong><span>días planeados</span></div>
+<div class="kpi"><strong>5</strong><span>alojamientos principales</span></div>
+<div class="kpi"><strong>∞</strong><span>momentos memorables</span></div>
+</div>
+</article>
+<div class="postcards">
+<div class="postcard valencia"><div class="city">Inicio</div><h3>Valencia</h3><small>casa, catedral, agua de Valencia, playa</small><div class="iconline">☼ ⛪ 🌊</div></div>
+<div class="postcard lisboa"><div class="city">Portugal</div><h3>Lisboa + Fátima</h3><small>centro histórico, santuario y velas</small><div class="iconline">🌙 🕯️ ⛪</div></div>
+<div class="postcard paris"><div class="city">Francia</div><h3>París</h3><small>Torre Eiffel, Notre-Dame, Versalles</small><div class="iconline">🗼 ✨ 🏰</div></div>
+<div class="postcard lourdes"><div class="city">Espiritual</div><h3>Lourdes</h3><small>gruta, procesiones, Bernadette</small><div class="iconline">🕯️ ⛰️ 💧</div></div>
+<div class="postcard rome" style="grid-column:1/-1"><div class="city">Gran cierre</div><h3>Roma</h3><small>Vaticano, Pantheon, Coliseo, Asís</small><div class="iconline">🏛️ ✝️ 🌿</div></div>
+</div>
+</div>
+</section>
+<section class="section" id="overview">
+<h3>Resumen general</h3>
+<div class="summary-grid">
+<article class="card flights">
+<h4 style="margin-top:0;font-family:Georgia,serif;font-size:28px">Vuelos y trayectos clave</h4>
+<div class="flight-row"><div class="date">28 abr</div><div><strong>Valencia → Lisboa</strong><div class="muted small">Vuelo 21:00 · llegada 22:20</div></div><span class="tag">confirmado</span></div>
+<div class="flight-row"><div class="date">2 may</div><div><strong>Lisboa → París</strong><div class="muted small">Vuelo 05:55 · llegada 09:25</div></div><span class="tag">confirmado</span></div>
+<div class="flight-row"><div class="date">5 may</div><div><strong>París → Lourdes</strong><div class="muted small">Vuelo 20:40 · llegada 22:00 aprox. · aeropuerto por confirmar</div></div><span class="tag">revisar</span></div>
+<div class="flight-row"><div class="date">8 may</div><div><strong>Lourdes → Roma</strong><div class="muted small">Vuelo 09:20 · llegada 11:15</div></div><span class="tag">confirmado</span></div>
+<div class="flight-row"><div class="date">16 may</div><div><strong>Valencia · salida mamá</strong><div class="muted small">Día de casa + aeropuerto</div></div><span class="tag">local</span></div>
+<div class="flight-row"><div class="date">12 may</div><div><strong>Roma (Fiumicino) → Valencia</strong><div class="muted small">Vuelo 21:24 · llegada 23:35</div></div><span class="tag">confirmado</span></div>
 
-    <section id="overview" class="section">
-      <h3>Resumen general</h3>
-      <div class="summary-grid">
-        <article class="card flights">
-          <h4 style="margin-top:0;font-family:Georgia,serif;font-size:28px">Vuelos y trayectos clave</h4>
-          <div class="flight-row"><div class="date">28 abr</div><div><strong>Valencia → Lisboa</strong><div class="muted small">Vuelo 21:00 · llegada 22:20</div></div><span class="tag">confirmado</span></div>
-          <div class="flight-row"><div class="date">2 may</div><div><strong>Lisboa → París</strong><div class="muted small">Vuelo 05:55 · llegada 09:25</div></div><span class="tag">confirmado</span></div>
-          <div class="flight-row"><div class="date">5 may</div><div><strong>París → Lourdes</strong><div class="muted small">Vuelo 20:40 · llegada 22:00 aprox. · aeropuerto por confirmar</div></div><span class="tag">revisar</span></div>
-          <div class="flight-row"><div class="date">8 may</div><div><strong>Lourdes → Roma</strong><div class="muted small">Vuelo 09:20 · llegada 11:15</div></div><span class="tag">confirmado</span></div>
-          <div class="flight-row"><div class="date">16 may</div><div><strong>Valencia · salida mamá</strong><div class="muted small">Día de casa + aeropuerto</div></div><span class="tag">local</span></div>
-        </article>
+</article>
+<div class="mini-grid">
+<article class="card hotels">
+<h4 style="margin-top:0;font-family:Georgia,serif;font-size:24px">Hoteles</h4>
+<div class="hotel-row"><div>🇵🇹</div><div><strong>Goodnight Hostel</strong><div class="muted small">Rua dos Correeiros 113, 2nd · Lisboa</div></div><span class="tag">28 abr</span></div>
+<div class="hotel-row"><div>🇵🇹</div><div><strong>Fátima</strong><div class="muted small">Alojamiento del 29 abr al 1 may</div></div><span class="tag">3 noches</span></div>
+<div class="hotel-row"><div>🇫🇷</div><div><strong>ibis budget Paris Porte de Vincennes</strong><div class="muted small">2 avenue Leon Gaumont · París</div></div><span class="tag">2–5 may</span></div>
+<div class="hotel-row"><div>🇫🇷</div><div><strong>Central Studio Lourdes</strong><div class="muted small">29 Rue du Bourg · Lourdes</div></div><span class="tag">5–8 may</span></div>
+<div class="hotel-row"><div>🇮🇹</div><div><strong>TIBERIVS Home</strong><div class="muted small">Via Portuense 153 · Roma</div></div><span class="tag">8–12 may</span></div>
+</article>
+<article class="card city-summary">
+<h4 style="margin-top:0;font-family:Georgia,serif;font-size:24px">Itinerario resumido por ciudad</h4>
+<div class="city-row"><div>🏠</div><div><strong>Valencia</strong><div class="muted small">Centro histórico antes del viaje; Ciudad de las Artes, playa y plan social después.</div></div><span class="tag">26–28 abr / 12–16 may</span></div>
+<div class="city-row"><div>🕯️</div><div><strong>Lisboa + Fátima</strong><div class="muted small">Llegada suave, traslado a Fátima, santuario y medio día en Lisboa con opción de free tour.</div></div><span class="tag">28 abr–2 may</span></div>
+<div class="city-row"><div>🗼</div><div><strong>París</strong><div class="muted small">Notre-Dame, Torre Eiffel de noche y de día, Versalles, Montmartre y paseo por Sena.</div></div><span class="tag">2–5 may</span></div>
+<div class="city-row"><div>💧</div><div><strong>Lourdes</strong><div class="muted small">Gruta, procesiones, misa, Huellas de Bernadette y opción Pic du Jer o castillo.</div></div><span class="tag">5–8 may</span></div>
+<div class="city-row"><div>🏛️</div><div><strong>Roma</strong><div class="muted small">Centro histórico, Coliseo, Vaticano con cúpula en domingo y excursión a Asís.</div></div><span class="tag">8–12 may</span></div>
+</article>
+</div>
 
-        <div class="mini-grid">
-          <article class="card hotels">
-            <h4 style="margin-top:0;font-family:Georgia,serif;font-size:24px">Hoteles</h4>
-            <div class="hotel-row"><div>🇵🇹</div><div><strong><a target="_blank" href="https://maps.app.goo.gl/822SDA1MYhA3NyXUA">Goodnight Hostel</a></strong><div class="muted small">Rua dos Correeiros 113, 2nd · Lisboa</div></div><span class="tag">28 abr</span></div>
-            <div class="hotel-row"><div>🇵🇹</div><div><strong><a target="_blank" href="https://maps.app.goo.gl/ydhRznMUWUSZAW2z5">Hotel Nossa Senhora de Lurdes</a></strong><div class="muted small">R. de Nossa Sra. de Lourdes 8 · Fátima</div></div><span class="tag">29 abr–1 may</span></div>
-            <div class="hotel-row"><div>🇫🇷</div><div><strong><a target="_blank" href="https://maps.app.goo.gl/qEaWXZHjkiob5SpG6">ibis budget Paris Porte de Vincennes</a></strong><div class="muted small">2 avenue Leon Gaumont · París</div></div><span class="tag">2–5 may</span></div>
-            <div class="hotel-row"><div>🇫🇷</div><div><strong><a target="_blank" href="https://maps.app.goo.gl/TGzwayVyBEPCmZda8">Central Studio Lourdes</a></strong><div class="muted small">29 Rue du Bourg · Lourdes</div></div><span class="tag">5–8 may</span></div>
-            <div class="hotel-row"><div>🇮🇹</div><div><strong><a target="_blank" href="https://maps.app.goo.gl/QoR1afu26EFoDjbJ9">TIBERIVS Home</a></strong><div class="muted small">Via Portuense 153 · Roma</div></div><span class="tag">8–12 may</span></div>
-          </article>
+<article class="card city-summary">
+<h4 style="margin-top:0;font-family:Georgia,serif;font-size:24px">Presupuesto total estimado</h4>
+<div class="budget"><span><strong>Total aproximado por persona</strong></span><strong>€300–555</strong></div>
+<p class="small muted" style="margin-top:12px">Incluye actividades, entradas y transporte local estimado. No incluye vuelos, hospedaje ni comidas, y puede subir o bajar según opciones como Oceanogràfic, free tours o actividades opcionales.</p>
+</article>
+</div>
+</section>
+<section class="section tabs" id="cities">
+<h3>Itinerarios detallados por ciudad</h3>
+<div class="tab-buttons">
+<button class="tab-btn active" data-tab="valencia">Valencia</button>
+<button class="tab-btn" data-tab="lisboa">Lisboa + Fátima</button>
+<button class="tab-btn" data-tab="paris">París</button>
+<button class="tab-btn" data-tab="lourdes">Lourdes</button>
+<button class="tab-btn" data-tab="rome">Roma</button>
+</div>
+<div class="tab-panel active" id="tab-valencia">
+<div class="city-hero">
+<article class="card city-cover valencia">
+<div class="tag" style="display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.22)">base del viaje</div>
+<h2>Valencia</h2>
+<p>Bloques suaves antes del viaje y planes más wow después, para aprovechar que probablemente venga el novio de tu hermana. Pensado para combinar turismo con trabajo desde las 16:00.</p>
+</article>
+<article class="card city-stats">
+<h4 style="margin-top:0">Snapshot</h4>
+<div class="stat-grid">
+<div class="stat"><strong>27–28 abr</strong><span class="muted small">pre-viaje</span></div>
+<div class="stat"><strong>13–15 may</strong><span class="muted small">post-viaje</span></div>
+<div class="stat"><strong>4pm</strong><span class="muted small">hora ideal para volver a trabajar</span></div>
+<div class="stat"><strong>€35–95</strong><span class="muted small">presupuesto estimado por persona sin Oceanogràfic / con Oceanogràfic</span></div>
+</div>
+</article>
+</div>
+<div class="content-grid">
+<div>
+<article class="card block">
+<h4>Itinerario propuesto</h4>
+<div class="itinerary-day">
+<h5>26 abril · llegada</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>21:00+</td><td>Recoger en estación + ir a casa</td><td>€0</td><td>Noche de descanso, sin más planes.</td></tr>
+</table><p class="day-total">Subtotal del día: €0</p>
+</div>
+<div class="itinerary-day">
+<h5>27 abril · centro histórico</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>09:30</td><td>Salida de casa</td><td>€0</td><td>Ideal moverse en metro/EMT al centro.</td></tr>
+<tr><td>10:00–12:00</td><td>Catedral + museo + Miguelete</td><td>€13</td><td>Buen bloque cultural principal.</td></tr>
+<tr><td>12:15–13:00</td><td>Plaza de la Virgen + paseo</td><td>€0</td><td>Fotos y ambiente.</td></tr>
+<tr><td>13:00–14:00</td><td>Mercado Central y almuerzo</td><td>€0</td><td>Plan cómodo y cercano.</td></tr>
+<tr><td>14:15–15:15</td><td>Café de las Horas</td><td>€9–14</td><td>Agua de Valencia y momento lindo.</td></tr>
+<tr><td>16:00</td><td>Vuelta a casa / café para trabajar</td><td>€0</td><td>Bloque respetando la jornada laboral.</td></tr>
+</table><p class="day-total">Subtotal del día: €22–27</p>
+</div>
+<div class="itinerary-day">
+<h5>28 abril · mañana ligera + vuelo</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>10:00–12:00</td><td>Paseo corto por Turia o café brunch</td><td>€0</td><td>Sin sobrecargar antes del vuelo.</td></tr>
+<tr><td>12:30–14:00</td><td>Almuerzo</td><td>€0</td><td>Regresar a casa con calma.</td></tr>
+<tr><td>14:00–18:00</td><td>Maletas + descanso</td><td>€0</td><td>Salir hacia el aeropuerto con margen.</td></tr>
+</table><p class="day-total">Subtotal del día: €0</p>
+</div>
+<div class="itinerary-day">
+<h5>13 mayo · recuperación</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>Mañana</td><td>Descanso en casa</td><td>€0</td><td>Después del viaje largo.</td></tr>
+<tr><td>Mediodía</td><td>Paseo suave por Turia</td><td>€0</td><td>Ideal si quieren airearse.</td></tr>
+<tr><td>Noche</td><td>Cena relajada</td><td>€0</td><td>Sin turismo fuerte.</td></tr>
+</table><p class="day-total">Subtotal del día: €0</p>
+</div>
+<div class="itinerary-day">
+<h5>14 mayo · playa + paella</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>10:30–13:30</td><td>Malvarrosa / paseo marítimo</td><td>€0</td><td>Mejor si hace sol.</td></tr>
+<tr><td>13:30–15:30</td><td>Paella</td><td>€0</td><td>Plan top para hacer con el novio también.</td></tr>
+<tr><td>16:00</td><td>Trabajo</td><td>€0</td><td>Vuelta a casa o café.</td></tr>
+</table><p class="day-total">Subtotal del día: €0</p>
+</div>
+<div class="itinerary-day">
+<h5>15 mayo · Ciudad de las Artes</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>10:00–13:30</td><td>Ciudad de las Artes y las Ciencias (exterior)</td><td>€0</td><td>Plan wow para hacer en grupo.</td></tr>
+<tr><td>13:30–15:00</td><td>Almuerzo por la zona</td><td>€0</td><td>Fórum / zona cercana.</td></tr>
+<tr><td>15:00–15:45</td><td>Opcional Oceanogràfic</td><td>€36–43 opcional</td><td>Solo si queréis convertirlo en plan largo.</td></tr>
+<tr><td>16:00</td><td>Trabajo</td><td>€0</td><td>Volver a casa o a un café tranquilo.</td></tr>
+</table><p class="day-total">Subtotal del día: €0–43</p>
+</div>
+<div class="itinerary-day">
+<h5>16 mayo · salida mamá</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>Todo el día</td><td>Casa + aeropuerto</td><td>€0</td><td>Día de cierre sin turismo.</td></tr>
+</table><p class="day-total">Subtotal del día: €0</p>
+</div>
+</article>
+</div>
+<div>
+<article class="card block">
+<h4>Checklist</h4>
+<ul class="checklist">
+<li><input style="margin-right:10px" type="checkbox"/>Catedral de Valencia</li>
+<li><input style="margin-right:10px" type="checkbox"/>Miguelete</li>
+<li><input style="margin-right:10px" type="checkbox"/>Mercado Central</li>
+<li><input style="margin-right:10px" type="checkbox"/>Café de las Horas</li>
+<li><input style="margin-right:10px" type="checkbox"/>Agua de Valencia</li>
+<li><input style="margin-right:10px" type="checkbox"/>Jardín del Turia</li>
+<li><input style="margin-right:10px" type="checkbox"/>Malvarrosa</li>
+<li><input style="margin-right:10px" type="checkbox"/>Paella junto al mar</li>
+<li><input style="margin-right:10px" type="checkbox"/>Ciudad de las Artes</li>
+<li><input style="margin-right:10px" type="checkbox"/>Oceanogràfic opcional</li>
+</ul>
+</article>
+<article class="card block">
+<h4>Presupuesto estimado</h4>
+<div class="budget"><span>Catedral + museo</span><strong>€10</strong></div>
+<div class="budget"><span>Miguelete</span><strong>€3</strong></div>
+<div class="budget"><span>Agua de Valencia</span><strong>€9–14</strong></div>
+<div class="budget"><span>Transporte urbano total</span><strong>€8–15</strong></div>
+<div class="budget"><span>Oceanogràfic (opcional)</span><strong>€36–43</strong></div>
+<div class="budget"><span><strong>Total estimado</strong></span><strong>€35–95</strong></div>
+</article>
+<article class="card block">
+<h4>Mapa</h4>
+<div class="map-wrap">
+<iframe loading="lazy" src="https://maps.google.com/maps?q=Valencia%20Cathedral%20Mercado%20Central%20Caf%C3%A9%20de%20las%20Horas%20Ciudad%20de%20las%20Artes%20Malvarrosa&amp;z=12&amp;output=embed"></iframe>
+</div>
+<div class="route-links">
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Valencia+Cathedral" target="_blank">Abrir puntos en Google Maps</a>
+</div>
+<div class="callout">Para poner una ruta personalizada con varias paradas: crea un mapa en Google My Maps, añade capas por día y luego reemplaza este iframe por el enlace de inserción que te da My Maps. Así podrás mostrar rutas exactas y colores por jornada.</div>
+</article>
+</div>
+</div>
+</div>
+<div class="tab-panel" id="tab-lisboa">
+<div class="city-hero">
+<article class="card city-cover lisboa">
+<div class="tag" style="display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.22)">Portugal</div>
+<h2>Lisboa + Fátima</h2>
+<p>Entrada suave en Lisboa, experiencia espiritual en Fátima y regreso con medio día flexible en la capital. Incluye la opción de free tour corto o paseo libre por Alfama.</p>
+</article>
+<article class="card city-stats">
+<h4 style="margin-top:0">Snapshot</h4>
+<div class="stat-grid">
+<div class="stat"><strong>28 abr</strong><span class="muted small">llegada nocturna</span></div>
+<div class="stat"><strong>29 abr–1 may</strong><span class="muted small">base en Fátima</span></div>
+<div class="stat"><strong>1 may</strong><span class="muted small">Lisboa express</span></div>
+<div class="stat"><strong>€65–145</strong><span class="muted small">aprox. por persona</span></div>
+</div>
+</article>
+</div>
+<div class="content-grid">
+<div>
+<article class="card block">
+<h4>Itinerario propuesto</h4>
+<div class="itinerary-day">
+<h5>28 abril · llegada a Lisboa</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>22:20</td><td>Llegada a Lisboa</td><td>€0</td><td>Ir directo al hostel.</td></tr>
+<tr><td>23:15–00:00</td><td>Traslado al Goodnight Hostel</td><td>€10–15</td><td>Uber/Bolt es lo más cómodo a esa hora.</td></tr>
+</table><p class="day-total">Subtotal del día: €10–15</p>
+</div>
+<div class="itinerary-day">
+<h5>29 abril · Lisboa → Fátima</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>08:00</td><td>Desayuno</td><td>€0</td><td>Salida tranquila.</td></tr>
+<tr><td>09:00–11:00</td><td>Bus a Fátima</td><td>€5–15</td><td>Rede Expressos/FlixBus según horario.</td></tr>
+<tr><td>12:00</td><td>Check-in / almuerzo</td><td>€0</td><td>Después, primer contacto con el santuario.</td></tr>
+<tr><td>Tarde</td><td>Capilla de las Apariciones + basílicas</td><td>€0</td><td>Paseo espiritual y ubicación.</td></tr>
+<tr><td>Noche</td><td>Procesión de velas</td><td>€0</td><td>Si os apetece, es una experiencia preciosa.</td></tr>
+</table><p class="day-total">Subtotal del día: €5–15</p>
+</div>
+<div class="itinerary-day">
+<h5>30 abril · Fátima completo</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>Mañana</td><td>Misa + Santuario</td><td>€0</td><td>Día con intención espiritual, sin prisa.</td></tr>
+<tr><td>Mediodía</td><td>Recorrido del recinto</td><td>€0</td><td>Basilica of the Rosary, Basilica of the Holy Trinity, plaza.</td></tr>
+<tr><td>Noche</td><td>Procesión opcional</td><td>€0</td><td>Dejar margen para descansar.</td></tr>
+</table><p class="day-total">Subtotal del día: €0</p>
+</div>
+<div class="itinerary-day">
+<h5>1 mayo · regreso a Lisboa</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>09:00–11:00</td><td>Bus a Lisboa</td><td>€5–15</td><td>Elegir uno no muy tarde.</td></tr>
+<tr><td>12:00</td><td>Dejar maletas</td><td>€0</td><td>Check-in o guarda equipaje.</td></tr>
+<tr><td>14:30–16:30</td><td>Opción A · free tour corto</td><td>€0–15 propina opcional</td><td>Baixa/Chiado/Alfama.</td></tr>
+<tr><td>14:30–19:00</td><td>Opción B · paseo libre</td><td>€0</td><td>Baixa, Sé, miradores, Alfama y cena temprana.</td></tr>
+<tr><td>22:00</td><td>Dormir temprano</td><td>€0</td><td>Vuelo muy madrugador al día siguiente.</td></tr>
+</table><p class="day-total">Subtotal del día: €5–30</p>
+</div>
+<div class="itinerary-day">
+<h5>2 mayo · vuelo a París</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>03:00–03:30</td><td>Salida al aeropuerto</td><td>€10–15</td><td>Uber/Bolt recomendado.</td></tr>
+</table><p class="day-total">Subtotal del día: €10–15</p>
+</div>
+</article>
+</div>
+<div>
+<article class="card block">
+<h4>Checklist</h4>
+<ul class="checklist">
+<li><input style="margin-right:10px" type="checkbox"/>Goodnight Hostel</li>
+<li><input style="margin-right:10px" type="checkbox"/>Baixa</li>
+<li><input style="margin-right:10px" type="checkbox"/>Sé de Lisboa</li>
+<li><input style="margin-right:10px" type="checkbox"/>Alfama</li>
+<li><input style="margin-right:10px" type="checkbox"/>Mirador Santa Luzia</li>
+<li><input style="margin-right:10px" type="checkbox"/>Santuario de Fátima</li>
+<li><input style="margin-right:10px" type="checkbox"/>Capilla de las Apariciones</li>
+<li><input style="margin-right:10px" type="checkbox"/>Basílica del Rosario</li>
+<li><input style="margin-right:10px" type="checkbox"/>Basílica de la Trinidad</li>
+<li><input style="margin-right:10px" type="checkbox"/>Procesión de velas</li>
+</ul>
+</article>
+<article class="card block">
+<h4>Presupuesto estimado</h4>
+<div class="budget"><span>Uber aeropuerto Lisboa</span><strong>€10–15</strong></div>
+<div class="budget"><span>Bus Lisboa ↔ Fátima</span><strong>€10–30</strong></div>
+<div class="budget"><span>Free tour Lisboa (propina)</span><strong>€10–15</strong></div>
+<div class="budget"><span>Transporte urbano Lisboa</span><strong>€5–10</strong></div>
+<div class="budget"><span>Entradas principales</span><strong>€0</strong></div>
+<div class="budget"><span><strong>Total estimado</strong></span><strong>€65–145</strong></div>
+</article>
+<article class="card block">
+<h4>Mapa</h4>
+<div class="map-wrap">
+<iframe loading="lazy" src="https://maps.google.com/maps?q=Goodnight%20Hostel%20Lisbon%20Alfama%20Lisbon%20Cathedral%20Fatima%20Sanctuary&amp;z=8&amp;output=embed"></iframe>
+</div>
+<div class="route-links">
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Goodnight+Hostel+Lisbon" target="_blank">Abrir mapa de puntos</a>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sanctuary+of+Fatima" target="_blank">Abrir ruta a Fátima</a>
+</div>
+<div class="callout">En la versión final puedes pegar aquí una ruta de My Maps con dos capas: Lisboa y Fátima. Si quieres usar free tour, añade el punto de encuentro oficial cuando lo elijas para que quede integrado.</div>
+</article>
+</div>
+</div>
+</div>
+<div class="tab-panel" id="tab-paris">
+<div class="city-hero">
+<article class="card city-cover paris">
+<div class="tag" style="display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.22)">Francia</div>
+<h2>París</h2>
+<p>París sin Louvre, pero con los grandes momentos: Notre-Dame, Torre Eiffel de noche y de día, un día entero en Versalles y un bloque de Montmartre con free tour opcional.</p>
+</article>
+<article class="card city-stats">
+<h4 style="margin-top:0">Snapshot</h4>
+<div class="stat-grid">
+<div class="stat"><strong>2 may</strong><span class="muted small">llegada 09:25</span></div>
+<div class="stat"><strong>3 may</strong><span class="muted small">Versalles</span></div>
+<div class="stat"><strong>4 may</strong><span class="muted small">Montmartre + Torre de día</span></div>
+<div class="stat"><strong>€95–160</strong><span class="muted small">aprox. por persona</span></div>
+</div>
+</article>
+</div>
+<div class="content-grid">
+<div>
+<article class="card block">
+<h4>Itinerario propuesto</h4>
+<div class="itinerary-day">
+<h5>2 mayo · Île de la Cité + Eiffel de noche</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>09:25–12:30</td><td>Llegada + traslado + dejar maletas</td><td>€0</td><td>Hotel no tan céntrico, moverse en metro.</td></tr>
+<tr><td>14:00–16:00</td><td>Notre-Dame + Île de la Cité</td><td>€0</td><td>Paseo inicial muy París.</td></tr>
+<tr><td>17:30–21:00</td><td>Torre Eiffel + Sena</td><td>€23–36</td><td>Reservar franja tarde para sunset y noche.</td></tr>
+</table><p class="day-total">Subtotal del día: €23–36</p>
+</div>
+<div class="itinerary-day">
+<h5>3 mayo · Versalles</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>08:00</td><td>Salida</td><td>€0</td><td>RER con tiempo.</td></tr>
+<tr><td>09:00–14:00</td><td>Palacio de Versalles</td><td>€21</td><td>Día completo, ir muy temprano.</td></tr>
+<tr><td>14:00–15:30</td><td>Jardines</td><td>€0</td><td>Buen cierre antes de volver.</td></tr>
+<tr><td>18:00</td><td>Regreso y cena tranquila</td><td>€0</td><td>Jornada intensa.</td></tr>
+</table><p class="day-total">Subtotal del día: €21</p>
+</div>
+<div class="itinerary-day">
+<h5>4 mayo · Montmartre + Torre de día</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>10:00–12:30</td><td>Montmartre + Sacré-Cœur</td><td>€0</td><td>Barrio con más encanto.</td></tr>
+<tr><td>15:00–16:30</td><td>Trocadéro + Torre Eiffel de día</td><td>€0</td><td>Así la ven también con buena luz.</td></tr>
+<tr><td>17:00–19:00</td><td>Free tour opcional o Sena</td><td>€0–15 propina opcional</td><td>Centro histórico o tour de Montmartre.</td></tr>
+</table><p class="day-total">Subtotal del día: €0–15</p>
+</div>
+<div class="itinerary-day">
+<h5>5 mayo · mañana libre + salida</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>10:30–15:30</td><td>Le Marais / paseo final</td><td>€0</td><td>Último bloque sin prisas.</td></tr>
+<tr><td>17:30</td><td>Regreso al hotel</td><td>€0</td><td>Recoger equipaje.</td></tr>
+<tr><td>18:30</td><td>Salida al aeropuerto</td><td>€0</td><td>Vuelo 20:40.</td></tr>
+</table><p class="day-total">Subtotal del día: €0</p>
+</div>
+</article>
+</div>
+<div>
+<article class="card block">
+<h4>Checklist</h4>
+<ul class="checklist">
+<li><input style="margin-right:10px" type="checkbox"/>Notre-Dame</li>
+<li><input style="margin-right:10px" type="checkbox"/>Île de la Cité</li>
+<li><input style="margin-right:10px" type="checkbox"/>Torre Eiffel de noche</li>
+<li><input style="margin-right:10px" type="checkbox"/>Torre Eiffel de día</li>
+<li><input style="margin-right:10px" type="checkbox"/>Trocadéro</li>
+<li><input style="margin-right:10px" type="checkbox"/>Versalles</li>
+<li><input style="margin-right:10px" type="checkbox"/>Montmartre</li>
+<li><input style="margin-right:10px" type="checkbox"/>Sacré-Cœur</li>
+<li><input style="margin-right:10px" type="checkbox"/>Le Marais</li>
+<li><input style="margin-right:10px" type="checkbox"/>Free tour opcional</li>
+</ul>
+</article>
+<article class="card block">
+<h4>Presupuesto estimado</h4>
+<div class="budget"><span>Torre Eiffel</span><strong>€14–36</strong></div>
+<div class="budget"><span>Versalles</span><strong>€21–32</strong></div>
+<div class="budget"><span>Metro / RER</span><strong>€20–35</strong></div>
+<div class="budget"><span>Free tour (propina)</span><strong>€10–15</strong></div>
+<div class="budget"><span><strong>Total estimado</strong></span><strong>€95–160</strong></div>
+</article>
+<article class="card block">
+<h4>Mapa</h4>
+<div class="map-wrap">
+<iframe loading="lazy" src="https://maps.google.com/maps?q=Eiffel%20Tower%20Notre-Dame%20Cathedral%20Paris%20Montmartre%20Palace%20of%20Versailles&amp;z=11&amp;output=embed"></iframe>
+</div>
+<div class="route-links">
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Eiffel+Tower" target="_blank">Abrir ruta a la Torre Eiffel</a>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Palace+of+Versailles" target="_blank">Abrir ruta a Versalles</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+<div class="tab-panel" id="tab-lourdes">
+<div class="city-hero">
+<article class="card city-cover lourdes">
+<div class="tag" style="display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.22)">Francia espiritual</div>
+<h2>Lourdes</h2>
+<p>Una parada contemplativa, con una estructura diaria muy clara: gruta, rosario, procesión eucarística, procesión mariana y tiempo para comprender la historia de Bernadette.</p>
+</article>
+<article class="card city-stats">
+<h4 style="margin-top:0">Snapshot</h4>
+<div class="stat-grid">
+<div class="stat"><strong>5 may</strong><span class="muted small">llegada nocturna</span></div>
+<div class="stat"><strong>6 may</strong><span class="muted small">día espiritual fuerte</span></div>
+<div class="stat"><strong>7 may</strong><span class="muted small">misa + opción externa</span></div>
+<div class="stat"><strong>€25–70</strong><span class="muted small">aprox. por persona</span></div>
+</div>
+</article>
+</div>
+<div class="content-grid">
+<div>
+<article class="card block">
+<h4>Itinerario propuesto</h4>
+<div class="itinerary-day">
+<h5>5 mayo · llegada</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>22:00+</td><td>Llegada a Lourdes + check-in</td><td>€0</td><td>Paseo corto nocturno solo si hay energía.</td></tr>
+</table><p class="day-total">Subtotal del día: €0</p>
+</div>
+<div class="itinerary-day">
+<h5>6 mayo · santuario + Bernadette</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>Mañana</td><td>Gruta + santuario + velas</td><td>€0</td><td>Tiempo de recogimiento.</td></tr>
+<tr><td>Mediodía</td><td>Huellas de Bernadette</td><td>€0</td><td>Moulin de Boly, Cachot y lugares clave.</td></tr>
+<tr><td>15:00</td><td>Rosario en la Gruta</td><td>€0</td><td>Muy recomendado.</td></tr>
+<tr><td>17:00</td><td>Procesión eucarística</td><td>€0</td><td>Con bendición de los enfermos.</td></tr>
+<tr><td>21:00</td><td>Procesión mariana de antorchas</td><td>€0</td><td>Imperdible.</td></tr>
+</table><p class="day-total">Subtotal del día: €0</p>
+</div>
+<div class="itinerary-day">
+<h5>7 mayo · misa + opción A/B/C</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>09:30</td><td>Misa</td><td>€0</td><td>Buen punto de inicio.</td></tr>
+<tr><td>Tarde A</td><td>Santuario con calma</td><td>€0</td><td>Repetir gruta, capillas, tiendas religiosas.</td></tr>
+<tr><td>Tarde B</td><td>Pic du Jer</td><td>€11–15 opcional</td><td>Si hace bueno y apetece una vista panorámica.</td></tr>
+<tr><td>Tarde C</td><td>Château Fort</td><td>€8–9 opcional</td><td>Si queréis una visita cultural corta.</td></tr>
+<tr><td>21:00</td><td>Procesión mariana</td><td>€0</td><td>Se puede repetir, merece la pena.</td></tr>
+</table><p class="day-total">Subtotal del día: €0–15 o €0–9 según opción</p>
+</div>
+<div class="itinerary-day">
+<h5>8 mayo · salida a Roma</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>Muy temprano</td><td>Traslado al aeropuerto</td><td>€10–25</td><td>Mejor taxi o traslado reservado.</td></tr>
+</table><p class="day-total">Subtotal del día: €10–25</p>
+</div>
+</article>
+</div>
+<div>
+<article class="card block">
+<h4>Checklist</h4>
+<ul class="checklist">
+<li><input style="margin-right:10px" type="checkbox"/>Gruta de Massabielle</li>
+<li><input style="margin-right:10px" type="checkbox"/>Santuario</li>
+<li><input style="margin-right:10px" type="checkbox"/>Rosario 15:00</li>
+<li><input style="margin-right:10px" type="checkbox"/>Procesión eucarística 17:00</li>
+<li><input style="margin-right:10px" type="checkbox"/>Procesión mariana 21:00</li>
+<li><input style="margin-right:10px" type="checkbox"/>Huellas de Bernadette</li>
+<li><input style="margin-right:10px" type="checkbox"/>Moulin de Boly</li>
+<li><input style="margin-right:10px" type="checkbox"/>Cachot</li>
+<li><input style="margin-right:10px" type="checkbox"/>Pic du Jer opcional</li>
+<li><input style="margin-right:10px" type="checkbox"/>Château Fort opcional</li>
+</ul>
+</article>
+<article class="card block">
+<h4>Presupuesto estimado</h4>
+<div class="budget"><span>Santuario, rosario, procesiones</span><strong>€0</strong></div>
+<div class="budget"><span>Pic du Jer (opcional)</span><strong>€11–15</strong></div>
+<div class="budget"><span>Château Fort (opcional)</span><strong>€8–9</strong></div>
+<div class="budget"><span>Taxi / shuttle aeropuerto</span><strong>€6–25</strong></div>
+<div class="budget"><span><strong>Total estimado</strong></span><strong>€25–70</strong></div>
+</article>
+<article class="card block">
+<h4>Mapa</h4>
+<div class="map-wrap">
+<iframe loading="lazy" src="https://maps.google.com/maps?q=Sanctuary%20of%20Our%20Lady%20of%20Lourdes%20Grotto%20of%20Massabielle%20Pic%20du%20Jer%20Chateau%20Fort%20Lourdes&amp;z=14&amp;output=embed"></iframe>
+</div>
+<div class="route-links">
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sanctuary+of+Our+Lady+of+Lourdes" target="_blank">Abrir ruta al santuario</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+<div class="tab-panel" id="tab-rome">
+<div class="city-hero">
+<article class="card city-cover rome">
+<div class="tag" style="display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.22)">Italia</div>
+<h2>Roma</h2>
+<p>Roma final del viaje: historia, Vaticano con misa y cúpula, atardeceres bonitos y una escapada a Asís.</p>
+</article>
+<article class="card city-stats">
+<h4 style="margin-top:0">Snapshot</h4>
+<div class="stat-grid">
+<div class="stat"><strong>8 may</strong><span class="muted small">llegada 11:15</span></div>
+<div class="stat"><strong>10 may</strong><span class="muted small">misa + Regina Caeli</span></div>
+<div class="stat"><strong>11 may</strong><span class="muted small">Asís</span></div>
+<div class="stat"><strong>€135–212</strong><span class="muted small">aprox. por persona</span></div>
+</div>
+</article>
+</div>
+<div class="content-grid">
+<div>
+<article class="card block">
+<h4>Itinerario propuesto</h4>
+<div class="itinerary-day">
+<h5>8 mayo · llegada + Trastevere + Trevi de noche</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>11:15–15:30</td><td>Llegada + check-in</td><td>€0</td><td>Via Portuense queda bien conectada por Trastevere.</td></tr>
+<tr><td>17:00–20:00</td><td>Trastevere, Campo de' Fiori y Piazza Navona</td><td>€0</td><td>Tarde agradable sin correr.</td></tr>
+<tr><td>22:00</td><td>Fontana di Trevi</td><td>€0</td><td>Mejor verla tarde para evitar aglomeración.</td></tr>
+</table><p class="day-total">Subtotal del día: €0</p>
+</div>
+<div class="itinerary-day">
+<h5>9 mayo · Coliseo + Foro + Pantheon</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>09:00–13:30</td><td>Coliseo + Foro + Palatino</td><td>€18</td><td>Reservar franja temprana.</td></tr>
+<tr><td>15:30–16:30</td><td>Piazza Venezia + Campidoglio</td><td>€0</td><td>Exterior y vistas.</td></tr>
+<tr><td>17:30–18:30</td><td>Pantheon</td><td>€5</td><td>Entrada con calma y tiempo de disfrutarlo.</td></tr>
+</table><p class="day-total">Subtotal del día: €23</p>
+</div>
+<div class="itinerary-day">
+<h5>10 mayo · Vaticano</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
 
-          <article class="card city-summary">
-            <h4 style="margin-top:0;font-family:Georgia,serif;font-size:24px">Itinerario resumido por ciudad</h4>
-            <div class="city-row"><div>🏠</div><div><strong>Valencia</strong><div class="muted small">Centro histórico antes del viaje; Ciudad de las Artes, playa y plan social después.</div></div><span class="tag">26–28 abr / 12–16 may</span></div>
-            <div class="city-row"><div>🕯️</div><div><strong>Lisboa + Fátima</strong><div class="muted small">Llegada suave, traslado a Fátima, santuario y medio día en Lisboa con opción de free tour.</div></div><span class="tag">28 abr–2 may</span></div>
-            <div class="city-row"><div>🗼</div><div><strong>París</strong><div class="muted small">Notre-Dame, Torre Eiffel de noche y de día, Versalles, Montmartre y paseo por Sena.</div></div><span class="tag">2–5 may</span></div>
-            <div class="city-row"><div>💧</div><div><strong>Lourdes</strong><div class="muted small">Gruta, procesiones, misa, Huellas de Bernadette y opción Pic du Jer o castillo.</div></div><span class="tag">5–8 may</span></div>
-            <div class="city-row"><div>🏛️</div><div><strong>Roma</strong><div class="muted small">Centro histórico, Coliseo, Vaticano en dos días y excursión a Asís.</div></div><span class="tag">8–12 may</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <section id="cities" class="section tabs">
-      <h3>Itinerarios detallados por ciudad</h3>
-      <div class="tab-buttons">
-        <button class="tab-btn active" data-tab="valencia">Valencia</button>
-        <button class="tab-btn" data-tab="lisboa">Lisboa + Fátima</button>
-        <button class="tab-btn" data-tab="paris">París</button>
-        <button class="tab-btn" data-tab="lourdes">Lourdes</button>
-        <button class="tab-btn" data-tab="rome">Roma</button>
-      </div>
 
-      <div class="tab-panel active" id="tab-valencia">
-        <div class="city-hero">
-          <article class="card city-cover valencia">
-            <div class="tag" style="display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.22)">base del viaje</div>
-            <h2>Valencia</h2>
-            <p>Bloques suaves antes del viaje y planes más wow después, para aprovechar que probablemente venga el novio de tu hermana. Pensado para combinar turismo con trabajo desde las 16:00.</p>
-          </article>
-          <article class="card city-stats">
-            <h4 style="margin-top:0">Snapshot</h4>
-            <div class="stat-grid">
-              <div class="stat"><strong>27–28 abr</strong><span class="muted small">pre-viaje</span></div>
-              <div class="stat"><strong>13–15 may</strong><span class="muted small">post-viaje</span></div>
-              <div class="stat"><strong>4pm</strong><span class="muted small">hora ideal para volver a trabajar</span></div>
-              <div class="stat"><strong>€35–95</strong><span class="muted small">presupuesto estimado por persona sin Oceanogràfic / con Oceanogràfic</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="content-grid">
-          <div>
-            <article class="card block">
-              <h4>Itinerario propuesto</h4>
-              <div class="itinerary-day">
-                <h5>26 abril · llegada</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>21:00+</td><td>Recoger en estación + ir a casa</td><td>Noche de descanso, sin más planes.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>27 abril · centro histórico</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>09:30</td><td>Salida de casa</td><td>Ideal moverse en metro/EMT al centro.</td></tr>
-                  <tr><td>10:00–12:00</td><td>Catedral + museo + Miguelete</td><td>Buen bloque cultural principal.</td></tr>
-                  <tr><td>12:15–13:00</td><td>Plaza de la Virgen + paseo</td><td>Fotos y ambiente.</td></tr>
-                  <tr><td>13:00–14:00</td><td>Mercado Central y almuerzo</td><td>Plan cómodo y cercano.</td></tr>
-                  <tr><td>14:15–15:15</td><td>Café de las Horas</td><td>Agua de Valencia y momento lindo.</td></tr>
-                  <tr><td>16:00</td><td>Vuelta a casa / café para trabajar</td><td>Bloque respetando la jornada laboral.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>28 abril · mañana ligera + vuelo</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>10:00–12:00</td><td>Paseo corto por Turia o café brunch</td><td>Sin sobrecargar antes del vuelo.</td></tr>
-                  <tr><td>12:30–14:00</td><td>Almuerzo</td><td>Regresar a casa con calma.</td></tr>
-                  <tr><td>14:00–18:00</td><td>Maletas + descanso</td><td>Salir hacia el aeropuerto con margen.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>13 mayo · recuperación</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>Mañana</td><td>Descanso en casa</td><td>Después del viaje largo.</td></tr>
-                  <tr><td>Mediodía</td><td>Paseo suave por Turia</td><td>Ideal si quieren airearse.</td></tr>
-                  <tr><td>Noche</td><td>Cena relajada</td><td>Sin turismo fuerte.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>14 mayo · playa + paella</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>10:30–13:30</td><td>Malvarrosa / paseo marítimo</td><td>Mejor si hace sol.</td></tr>
-                  <tr><td>13:30–15:30</td><td>Paella</td><td>Plan top para hacer con el novio también.</td></tr>
-                  <tr><td>16:00</td><td>Trabajo</td><td>Vuelta a casa o café.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>15 mayo · Ciudad de las Artes</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>10:00–13:30</td><td>Ciudad de las Artes y las Ciencias (exterior)</td><td>Plan wow para hacer en grupo.</td></tr>
-                  <tr><td>13:30–15:00</td><td>Almuerzo por la zona</td><td>Fórum / zona cercana.</td></tr>
-                  <tr><td>15:00–15:45</td><td>Opcional Oceanogràfic</td><td>Solo si queréis convertirlo en plan largo.</td></tr>
-                  <tr><td>16:00</td><td>Trabajo</td><td>Volver a casa o a un café tranquilo.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>16 mayo · salida mamá</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>Todo el día</td><td>Casa + aeropuerto</td><td>Día de cierre sin turismo.</td></tr>
-                </table>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article class="card block">
-              <h4>Dónde os quedáis</h4>
-              <div class="stay-card">
-                <h5>Casa en Valencia</h5>
-                <p class="muted small">Base del viaje antes de salir y al volver. Ideal para descansar, trabajar desde las 16:00 y lavar/rehacer maletas.</p>
-              </div>
-            </article>
-            <article class="card block">
-              <h4>Checklist</h4>
-              <ul class="checklist">
-                <li>Catedral de Valencia</li>
-                <li>Miguelete</li>
-                <li>Mercado Central</li>
-                <li>Café de las Horas</li>
-                <li>Agua de Valencia</li>
-                <li>Jardín del Turia</li>
-                <li>Malvarrosa</li>
-                <li>Paella junto al mar</li>
-                <li>Ciudad de las Artes</li>
-                <li>Oceanogràfic opcional</li>
-              </ul>
-            </article>
-            <article class="card block">
-              <h4>Presupuesto estimado + enlaces oficiales</h4>
-              <div class="budget"><span>Catedral + museo</span><strong>€10</strong></div>
-              <div class="budget"><span>Miguelete</span><strong>€3</strong></div>
-              <div class="budget"><span>Agua de Valencia</span><strong>€9–14</strong></div>
-              <div class="budget"><span>Transporte urbano total</span><strong>€8–15</strong></div>
-              <div class="budget"><span>Oceanogràfic (opcional)</span><strong>€36–43</strong></div>
-              <div class="budget"><span><strong>Total estimado</strong></span><strong>€35–95</strong></div><div class="budget-note">Guarda aquí los enlaces oficiales de entradas y transporte para tener todo en un solo lugar.</div>
-              <div class="link-list">
-                <a target="_blank" href="https://catedraldevalencia.es/visita-cultural/">Catedral y museo · compra oficial</a>
-                <a target="_blank" href="https://www.catedraldevalencia.es/el-miguelete/">Miguelete · info oficial</a>
-                <a target="_blank" href="https://www.oceanografic.org/entradas/">Oceanogràfic · entradas oficiales</a>
-                <a target="_blank" href="https://www.emtvalencia.es/ciudadano/index.php?lang=es">EMT Valencia · transporte urbano</a>
-                <a target="_blank" href="https://www.metrovalencia.es/">Metrovalencia · horarios y tarifas</a>
-              </div>
-            </article>
-            <article class="card block">
-              <h4>Mapa</h4>
-              <div class="map-wrap">
-                <iframe loading="lazy" src="https://maps.google.com/maps?q=Valencia%20Cathedral%20Mercado%20Central%20Caf%C3%A9%20de%20las%20Horas%20Ciudad%20de%20las%20Artes%20Malvarrosa&z=12&output=embed"></iframe>
-              </div>
-              <div class="route-links">
-                <a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=Valencia+Cathedral">Abrir puntos en Google Maps</a>
-              </div>
-              <div class="callout">Para poner una ruta personalizada con varias paradas: crea un mapa en Google My Maps, añade capas por día y luego reemplaza este iframe por el enlace de inserción que te da My Maps. Así podrás mostrar rutas exactas y colores por jornada.</div>
-            </article>
-          </div>
-        </div>
-      </div>
 
-      <div class="tab-panel" id="tab-lisboa">
-        <div class="city-hero">
-          <article class="card city-cover lisboa">
-            <div class="tag" style="display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.22)">Portugal</div>
-            <h2>Lisboa + Fátima</h2>
-            <p>Entrada suave en Lisboa, experiencia espiritual en Fátima y regreso con medio día flexible en la capital. Incluye la opción de free tour corto o paseo libre por Alfama.</p>
-          </article>
-          <article class="card city-stats">
-            <h4 style="margin-top:0">Snapshot</h4>
-            <div class="stat-grid">
-              <div class="stat"><strong>28 abr</strong><span class="muted small">llegada nocturna</span></div>
-              <div class="stat"><strong>29 abr–1 may</strong><span class="muted small">base en Fátima</span></div>
-              <div class="stat"><strong>1 may</strong><span class="muted small">Lisboa express</span></div>
-              <div class="stat"><strong>€65–145</strong><span class="muted small">aprox. por persona</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="content-grid">
-          <div>
-            <article class="card block">
-              <h4>Itinerario propuesto</h4>
-              <div class="itinerary-day">
-                <h5>28 abril · llegada a Lisboa</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>22:20</td><td>Llegada a Lisboa</td><td>Ir directo al hostel.</td></tr>
-                  <tr><td>23:15–00:00</td><td>Traslado al Goodnight Hostel</td><td>Uber/Bolt es lo más cómodo a esa hora.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>29 abril · Lisboa → Fátima</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>08:00</td><td>Desayuno</td><td>Salida tranquila.</td></tr>
-                  <tr><td>09:00–11:00</td><td>Bus a Fátima</td><td>Rede Expressos/FlixBus según horario.</td></tr>
-                  <tr><td>12:00</td><td>Check-in / almuerzo</td><td>Después, primer contacto con el santuario.</td></tr>
-                  <tr><td>Tarde</td><td>Capilla de las Apariciones + basílicas</td><td>Paseo espiritual y ubicación.</td></tr>
-                  <tr><td>Noche</td><td>Procesión de velas</td><td>Si os apetece, es una experiencia preciosa.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>30 abril · Fátima completo</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>Mañana</td><td>Misa + Santuario</td><td>Día con intención espiritual, sin prisa.</td></tr>
-                  <tr><td>Mediodía</td><td>Recorrido del recinto</td><td>Basilica of the Rosary, Basilica of the Holy Trinity, plaza.</td></tr>
-                  <tr><td>Noche</td><td>Procesión opcional</td><td>Dejar margen para descansar.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>1 mayo · regreso a Lisboa</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>09:00–11:00</td><td>Bus a Lisboa</td><td>Elegir uno no muy tarde.</td></tr>
-                  <tr><td>12:00</td><td>Dejar maletas</td><td>Check-in o guarda equipaje.</td></tr>
-                  <tr><td>14:30–16:30</td><td>Opción A · free tour corto</td><td>Baixa/Chiado/Alfama.</td></tr>
-                  <tr><td>14:30–19:00</td><td>Opción B · paseo libre</td><td>Baixa, Sé, miradores, Alfama y cena temprana.</td></tr>
-                  <tr><td>22:00</td><td>Dormir temprano</td><td>Vuelo muy madrugador al día siguiente.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>2 mayo · vuelo a París</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>03:00–03:30</td><td>Salida al aeropuerto</td><td>Uber/Bolt recomendado.</td></tr>
-                </table>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article class="card block">
-              <h4>Dónde os quedáis</h4>
-              <div class="stay-card">
-                <h5>Lisboa · Goodnight Hostel</h5>
-                <p class="muted small">R. dos Correeiros 113 2nd, 1100-163 Lisboa</p>
-                <a class="btn" target="_blank" href="https://maps.app.goo.gl/822SDA1MYhA3NyXUA">Abrir hotel en Google Maps</a>
-              </div>
-              <div class="stay-card">
-                <h5>Fátima · Hotel Nossa Senhora de Lurdes</h5>
-                <p class="muted small">R. de Nossa Sra. de Lourdes 8, 2495-422 Fátima</p>
-                <a class="btn" target="_blank" href="https://maps.app.goo.gl/ydhRznMUWUSZAW2z5">Abrir hotel en Google Maps</a>
-              </div>
-            </article>
-            <article class="card block">
-              <h4>Checklist</h4>
-              <ul class="checklist">
-                <li>Baixa / Chiado</li>
-                <li>Baixa</li>
-                <li>Sé de Lisboa</li>
-                <li>Alfama</li>
-                <li>Mirador Santa Luzia</li>
-                <li>Santuario de Fátima</li>
-                <li>Capilla de las Apariciones</li>
-                <li>Basílica del Rosario</li>
-                <li>Basílica de la Trinidad</li>
-                <li>Procesión de velas</li>
-              </ul>
-            </article>
-            <article class="card block">
-              <h4>Presupuesto estimado + enlaces oficiales</h4>
-              <div class="budget"><span>Uber aeropuerto Lisboa</span><strong>€10–15</strong></div>
-              <div class="budget"><span>Bus Lisboa ↔ Fátima</span><strong>€10–30</strong></div>
-              <div class="budget"><span>Free tour Lisboa (propina)</span><strong>€10–15</strong></div>
-              <div class="budget"><span>Transporte urbano Lisboa</span><strong>€5–10</strong></div>
-              <div class="budget"><span>Entradas principales</span><strong>€0</strong></div>
-              <div class="budget"><span><strong>Total estimado</strong></span><strong>€65–145</strong></div><div class="budget-note">Incluye enlaces para buses, santuario y transporte local.</div>
-              <div class="link-list">
-                <a target="_blank" href="https://rede-expressos.pt/en">Rede Expressos · Lisboa ↔ Fátima</a>
-                <a target="_blank" href="https://www.flixbus.pt/">FlixBus Portugal · alternativa</a>
-                <a target="_blank" href="https://www.fatima.pt/en">Santuario de Fátima · horarios y celebraciones</a>
-                <a target="_blank" href="https://www.carris.pt/en/">Carris Lisboa · buses y tranvías</a>
-                <a target="_blank" href="https://www.metrolisboa.pt/en/">Metro de Lisboa · info oficial</a>
-              </div>
-            </article>
-            <article class="card block">
-              <h4>Mapa</h4>
-              <div class="map-wrap">
-                <iframe loading="lazy" src="https://maps.google.com/maps?q=Goodnight%20Hostel%20Lisbon%20Alfama%20Lisbon%20Cathedral%20Fatima%20Sanctuary&z=8&output=embed"></iframe>
-              </div>
-              <div class="route-links">
-                <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Goodnight+Hostel+Lisbon">Abrir mapa de puntos</a>
-                <a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=Sanctuary+of+Fatima">Abrir ruta a Fátima</a>
-              </div>
-              <div class="callout">En la versión final puedes pegar aquí una ruta de My Maps con dos capas: Lisboa y Fátima. Si quieres usar free tour, añade el punto de encuentro oficial cuando lo elijas para que quede integrado.</div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-panel" id="tab-paris">
-        <div class="city-hero">
-          <article class="card city-cover paris">
-            <div class="tag" style="display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.22)">Francia</div>
-            <h2>París</h2>
-            <p>París sin Louvre, pero con los grandes momentos: Notre-Dame, Torre Eiffel de noche y de día, un día entero en Versalles y un bloque de Montmartre con free tour opcional.</p>
-          </article>
-          <article class="card city-stats">
-            <h4 style="margin-top:0">Snapshot</h4>
-            <div class="stat-grid">
-              <div class="stat"><strong>2 may</strong><span class="muted small">llegada 09:25</span></div>
-              <div class="stat"><strong>3 may</strong><span class="muted small">Versalles</span></div>
-              <div class="stat"><strong>4 may</strong><span class="muted small">Montmartre + Torre de día</span></div>
-              <div class="stat"><strong>€95–160</strong><span class="muted small">aprox. por persona</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="content-grid">
-          <div>
-            <article class="card block">
-              <h4>Itinerario propuesto</h4>
-              <div class="itinerary-day">
-                <h5>2 mayo · Île de la Cité + Eiffel de noche</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>09:25–12:30</td><td>Llegada + traslado + dejar maletas</td><td>Hotel no tan céntrico, moverse en metro.</td></tr>
-                  <tr><td>14:00–16:00</td><td>Notre-Dame + Île de la Cité</td><td>Paseo inicial muy París.</td></tr>
-                  <tr><td>17:30–21:00</td><td>Torre Eiffel + Sena</td><td>Reservar franja tarde para sunset y noche.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>3 mayo · Versalles</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>08:00</td><td>Salida</td><td>RER con tiempo.</td></tr>
-                  <tr><td>09:00–14:00</td><td>Palacio de Versalles</td><td>Día completo, ir muy temprano.</td></tr>
-                  <tr><td>14:00–15:30</td><td>Jardines</td><td>Buen cierre antes de volver.</td></tr>
-                  <tr><td>18:00</td><td>Regreso y cena tranquila</td><td>Jornada intensa.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>4 mayo · Montmartre + Torre de día</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>10:00–12:30</td><td>Montmartre + Sacré-Cœur</td><td>Barrio con más encanto.</td></tr>
-                  <tr><td>15:00–16:30</td><td>Trocadéro + Torre Eiffel de día</td><td>Así la ven también con buena luz.</td></tr>
-                  <tr><td>17:00–19:00</td><td>Free tour opcional o Sena</td><td>Centro histórico o tour de Montmartre.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>5 mayo · mañana libre + salida</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>10:30–15:30</td><td>Le Marais / paseo final</td><td>Último bloque sin prisas.</td></tr>
-                  <tr><td>17:30</td><td>Regreso al hotel</td><td>Recoger equipaje.</td></tr>
-                  <tr><td>18:30</td><td>Salida al aeropuerto</td><td>Vuelo 20:40.</td></tr>
-                </table>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article class="card block">
-              <h4>Dónde os quedáis</h4>
-              <div class="stay-card">
-                <h5>ibis budget Paris Porte de Vincennes</h5>
-                <p class="muted small">2 Av. Léon Gaumont, 75020 Paris</p>
-                <a class="btn" target="_blank" href="https://maps.app.goo.gl/qEaWXZHjkiob5SpG6">Abrir hotel en Google Maps</a>
-              </div>
-            </article>
-            <article class="card block">
-              <h4>Checklist</h4>
-              <ul class="checklist">
-                <li>Notre-Dame</li>
-                <li>Île de la Cité</li>
-                <li>Torre Eiffel de noche</li>
-                <li>Torre Eiffel de día</li>
-                <li>Trocadéro</li>
-                <li>Versalles</li>
-                <li>Montmartre</li>
-                <li>Sacré-Cœur</li>
-                <li>Le Marais</li>
-                <li>Free tour opcional</li>
-              </ul>
-            </article>
-            <article class="card block">
-              <h4>Presupuesto estimado + enlaces oficiales</h4>
-              <div class="budget"><span>Torre Eiffel</span><strong>€14–36</strong></div>
-              <div class="budget"><span>Versalles</span><strong>€21–32</strong></div>
-              <div class="budget"><span>Metro / RER</span><strong>€20–35</strong></div>
-              <div class="budget"><span>Free tour (propina)</span><strong>€10–15</strong></div>
-              <div class="budget"><span><strong>Total estimado</strong></span><strong>€95–160</strong></div>
-              <div class="budget-note">Aquí están los links clave de entradas y transporte parisino.</div>
-              <div class="link-list">
-                <a target="_blank" href="https://www.toureiffel.paris/en/rates-opening-times">Torre Eiffel · entradas oficiales</a>
-                <a target="_blank" href="https://www.chateauversailles.fr/plan-your-visit/tickets-and-prices">Versalles · entradas oficiales</a>
-                <a target="_blank" href="https://www.notredamedeparis.fr/en/">Notre-Dame · información oficial</a>
-                <a target="_blank" href="https://www.ratp.fr/en">RATP · metro y buses</a>
-                <a target="_blank" href="https://www.transilien.com/en">Transilien / SNCF · Versalles</a>
-              </div>
-            </article>
-            <article class="card block">
-              <h4>Mapa</h4>
-              <div class="map-wrap">
-                <iframe loading="lazy" src="https://maps.google.com/maps?q=Eiffel%20Tower%20Notre-Dame%20Cathedral%20Paris%20Montmartre%20Palace%20of%20Versailles&z=11&output=embed"></iframe>
-              </div>
-              <div class="route-links">
-                <a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=Eiffel+Tower">Abrir ruta a la Torre Eiffel</a>
-                <a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Versailles">Abrir ruta a Versalles</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-panel" id="tab-lourdes">
-        <div class="city-hero">
-          <article class="card city-cover lourdes">
-            <div class="tag" style="display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.22)">Francia espiritual</div>
-            <h2>Lourdes</h2>
-            <p>Una parada contemplativa, con una estructura diaria muy clara: gruta, rosario, procesión eucarística, procesión mariana y tiempo para comprender la historia de Bernadette.</p>
-          </article>
-          <article class="card city-stats">
-            <h4 style="margin-top:0">Snapshot</h4>
-            <div class="stat-grid">
-              <div class="stat"><strong>5 may</strong><span class="muted small">llegada nocturna</span></div>
-              <div class="stat"><strong>6 may</strong><span class="muted small">día espiritual fuerte</span></div>
-              <div class="stat"><strong>7 may</strong><span class="muted small">misa + opción externa</span></div>
-              <div class="stat"><strong>€25–70</strong><span class="muted small">aprox. por persona</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="content-grid">
-          <div>
-            <article class="card block">
-              <h4>Itinerario propuesto</h4>
-              <div class="itinerary-day">
-                <h5>5 mayo · llegada</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>22:00+</td><td>Llegada a Lourdes + check-in</td><td>Paseo corto nocturno solo si hay energía.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>6 mayo · santuario + Bernadette</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>Mañana</td><td>Gruta + santuario + velas</td><td>Tiempo de recogimiento.</td></tr>
-                  <tr><td>Mediodía</td><td>Huellas de Bernadette</td><td>Moulin de Boly, Cachot y lugares clave.</td></tr>
-                  <tr><td>15:00</td><td>Rosario en la Gruta</td><td>Muy recomendado.</td></tr>
-                  <tr><td>17:00</td><td>Procesión eucarística</td><td>Con bendición de los enfermos.</td></tr>
-                  <tr><td>21:00</td><td>Procesión mariana de antorchas</td><td>Imperdible.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>7 mayo · misa + opción A/B/C</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>09:30</td><td>Misa</td><td>Buen punto de inicio.</td></tr>
-                  <tr><td>Tarde A</td><td>Santuario con calma</td><td>Repetir gruta, capillas, tiendas religiosas.</td></tr>
-                  <tr><td>Tarde B</td><td>Pic du Jer</td><td>Si hace bueno y apetece una vista panorámica.</td></tr>
-                  <tr><td>Tarde C</td><td>Château Fort</td><td>Si queréis una visita cultural corta.</td></tr>
-                  <tr><td>21:00</td><td>Procesión mariana</td><td>Se puede repetir, merece la pena.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>8 mayo · salida a Roma</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>Muy temprano</td><td>Traslado al aeropuerto</td><td>Mejor taxi o traslado reservado.</td></tr>
-                </table>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article class="card block">
-              <h4>Dónde os quedáis</h4>
-              <div class="stay-card">
-                <h5>Central Studio Lourdes</h5>
-                <p class="muted small">29 Rue du Bourg, 65100 Lourdes</p>
-                <a class="btn" target="_blank" href="https://maps.app.goo.gl/TGzwayVyBEPCmZda8">Abrir hotel en Google Maps</a>
-              </div>
-            </article>
-            <article class="card block">
-              <h4>Checklist</h4>
-              <ul class="checklist">
-                <li>Gruta de Massabielle</li>
-                <li>Santuario</li>
-                <li>Rosario 15:00</li>
-                <li>Procesión eucarística 17:00</li>
-                <li>Procesión mariana 21:00</li>
-                <li>Huellas de Bernadette</li>
-                <li>Moulin de Boly</li>
-                <li>Cachot</li>
-                <li>Pic du Jer opcional</li>
-                <li>Château Fort opcional</li>
-              </ul>
-            </article>
-            <article class="card block">
-              <h4>Presupuesto estimado + enlaces oficiales</h4>
-              <div class="budget"><span>Santuario, rosario, procesiones</span><strong>€0</strong></div>
-              <div class="budget"><span>Pic du Jer (opcional)</span><strong>€11–15</strong></div>
-              <div class="budget"><span>Château Fort (opcional)</span><strong>€8–9</strong></div>
-              <div class="budget"><span>Taxi / shuttle aeropuerto</span><strong>€6–25</strong></div>
-              <div class="budget"><span><strong>Total estimado</strong></span><strong>€25–70</strong></div><div class="budget-note">Todo lo esencial de santuario, lugares opcionales y traslados.</div>
-              <div class="link-list">
-                <a target="_blank" href="https://www.lourdes-france.org/en/">Santuario de Lourdes · horarios oficiales</a>
-                <a target="_blank" href="https://en.lourdes-infotourisme.com/offers/funiculaire-du-pic-du-jer-lourdes-en-3152483/">Pic du Jer · info oficial</a>
-                <a target="_blank" href="https://www.chateaufort-lourdes.fr/en-GB/presentation/practical-information.html">Château Fort · info oficial</a>
-                <a target="_blank" href="https://en.lourdes-infotourisme.com/plan/lourdes-accessible-to-all/transport-and-traffic/">Lourdes tourisme · transportes</a>
-              </div>
-            </article>
-            <article class="card block">
-              <h4>Mapa</h4>
-              <div class="map-wrap">
-                <iframe loading="lazy" src="https://maps.google.com/maps?q=Sanctuary%20of%20Our%20Lady%20of%20Lourdes%20Grotto%20of%20Massabielle%20Pic%20du%20Jer%20Chateau%20Fort%20Lourdes&z=14&output=embed"></iframe>
-              </div>
-              <div class="route-links">
-                <a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=Sanctuary+of+Our+Lady+of+Lourdes">Abrir ruta al santuario</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-panel" id="tab-rome">
-        <div class="city-hero">
-          <article class="card city-cover rome">
-            <div class="tag" style="display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.22)">Italia</div>
-            <h2>Roma</h2>
-            <p>Un cierre grande pero bien repartido: centro histórico, Roma antigua, Vaticano en dos bloques y una excursión a Asís para sumar profundidad espiritual sin perder base en Roma.</p>
-          </article>
-          <article class="card city-stats">
-            <h4 style="margin-top:0">Snapshot</h4>
-            <div class="stat-grid">
-              <div class="stat"><strong>8 may</strong><span class="muted small">llegada 11:15</span></div>
-              <div class="stat"><strong>10 may</strong><span class="muted small">misa + Regina Caeli</span></div>
-              <div class="stat"><strong>11 may</strong><span class="muted small">Asís</span></div>
-              <div class="stat"><strong>€115–190</strong><span class="muted small">aprox. por persona</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="content-grid">
-          <div>
-            <article class="card block">
-              <h4>Itinerario propuesto</h4>
-              <div class="itinerary-day">
-                <h5>8 mayo · llegada + Trastevere + Trevi de noche</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>11:15–15:30</td><td>Llegada + check-in</td><td>Via Portuense queda bien conectada por Trastevere.</td></tr>
-                  <tr><td>17:00–19:00</td><td>Trastevere, Campo de' Fiori y Piazza Navona</td><td>Tarde agradable sin correr.</td></tr>
-                  <tr><td>19:30–21:30</td><td>Bloque flexible para clase de pasta</td><td>Reservar cuando elijáis taller; ideal ese mismo día o el 12 al mediodía si preferís.</td></tr>
-                  <tr><td>22:00</td><td>Fontana di Trevi</td><td>Mejor verla tarde para evitar aglomeración.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>9 mayo · Coliseo + Foro + Pantheon</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>09:00–13:30</td><td>Coliseo + Foro + Palatino</td><td>Reservar franja temprana.</td></tr>
-                  <tr><td>15:30–16:30</td><td>Piazza Venezia + Campidoglio</td><td>Exterior y vistas.</td></tr>
-                  <tr><td>17:30–18:30</td><td>Pantheon</td><td>Entrada con calma y tiempo de disfrutarlo.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>10 mayo · Vaticano</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>08:30</td><td>Entrada a San Pedro</td><td>Ir con margen para seguridad.</td></tr>
-                  <tr><td>09:00</td><td>Misa</td><td>Muy buena franja para enlazar con plaza.</td></tr>
-                  <tr><td>12:00</td><td>Regina Caeli</td><td>Momento central del domingo.</td></tr>
-                  <tr><td>15:30–18:00</td><td>Castel Sant'Angelo</td><td>Buena continuación en la zona.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>11 mayo · Asís</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>07:00–09:30</td><td>Tren Roma → Asís</td><td>Comprar con tiempo cuando elijáis horario.</td></tr>
-                  <tr><td>10:30–17:00</td><td>Basílica San Francesco + Santa Chiara + pueblo</td><td>Día redondo y distinto a Roma.</td></tr>
-                  <tr><td>18:00–21:00</td><td>Vuelta a Roma</td><td>Sin cambiar de hotel.</td></tr>
-                </table>
-              </div>
-              <div class="itinerary-day">
-                <h5>12 mayo · Museos Vaticanos + salida</h5>
-                <table>
-                  <tr><th>Hora</th><th>Plan</th><th>Notas</th></tr>
-                  <tr><td>08:30–12:30</td><td>Museos Vaticanos + Sixtina</td><td>Reservar primera franja.</td></tr>
-                  <tr><td>16:30–17:00</td><td>Salida al aeropuerto</td><td>Vuelo 20:00.</td></tr>
-                </table>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article class="card block">
-              <h4>Dónde os quedáis</h4>
-              <div class="stay-card">
-                <h5>TIBERIVS Home</h5>
-                <p class="muted small">Via Portuense, 153, 00153 Roma RM</p>
-                <a class="btn" target="_blank" href="https://maps.app.goo.gl/QoR1afu26EFoDjbJ9">Abrir hotel en Google Maps</a>
-              </div>
-            </article>
-            <article class="card block">
-              <h4>Checklist</h4>
-              <ul class="checklist">
-                <li>Trastevere</li>
-                <li>Campo de' Fiori</li>
-                <li>Piazza Navona</li>
-                <li>Fontana di Trevi</li>
-                <li>Pantheon</li>
-                <li>Coliseo</li>
-                <li>Foro Romano</li>
-                <li>Basílica de San Pedro</li>
-                <li>Regina Caeli</li>
-                <li>Museos Vaticanos</li>
-                <li>Castel Sant'Angelo</li>
-                <li>Asís</li>
-                <li>Clase de pasta (pendiente)</li>
-              </ul>
-            </article>
-            <article class="card block">
-              <h4>Presupuesto estimado + enlaces oficiales</h4>
-              <div class="budget"><span>Pantheon</span><strong>€5</strong></div>
-              <div class="budget"><span>Coliseo + Foro + Palatino</span><strong>€18</strong></div>
-              <div class="budget"><span>Castel Sant'Angelo</span><strong>€16</strong></div>
-              <div class="budget"><span>Museos Vaticanos</span><strong>€25</strong></div>
-              <div class="budget"><span>Transporte urbano</span><strong>€12–20</strong></div>
-              <div class="budget"><span>Tren a Asís</span><strong>€35–60</strong></div>
-              <div class="budget"><span><strong>Total estimado</strong></span><strong>€115–190</strong></div><div class="budget-note">Añadí los sitios oficiales para entradas, transporte y el tren a Asís. La clase de pasta queda pendiente hasta elegir taller.</div>
-              <div class="link-list">
-                <a target="_blank" href="https://direzionemuseiroma.cultura.gov.it/en/pantheon/">Pantheon · info oficial</a>
-                <a target="_blank" href="https://ticketing.colosseo.it/en/">Coliseo / Foro / Palatino · compra oficial</a>
-                <a target="_blank" href="https://www.basilicasanpietro.va/en.html">Basílica de San Pedro · horarios y misas</a>
-                <a target="_blank" href="https://tickets.museivaticani.va/home">Museos Vaticanos · tickets oficiales</a>
-                <a target="_blank" href="https://www.atac.roma.it/en/home">ATAC Roma · transporte urbano</a>
-                <a target="_blank" href="https://www.trenitalia.com/en.html">Trenitalia · Roma ↔ Asís</a>
-              </div>
-            </article>
-            <article class="card block">
-              <h4>Mapa</h4>
-              <div class="map-wrap">
-                <iframe loading="lazy" src="https://maps.google.com/maps?q=Pantheon%20Rome%20Colosseum%20St%20Peter's%20Basilica%20Trevi%20Fountain%20Castel%20Sant'Angelo&z=12&output=embed"></iframe>
-              </div>
-              <div class="route-links">
-                <a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=Colosseum+Rome">Abrir ruta al Coliseo</a>
-                <a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=St+Peter%27s+Basilica">Abrir ruta al Vaticano</a>
-                <a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=Assisi">Abrir ruta a Asís</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="notes" class="section">
-      <h3>Notas útiles para la versión final</h3>
-      <div class="utility-grid">
-        <article class="card utility">
-          <h4 style="margin-top:0">1. Cómo meter rutas exactas</h4>
-          <p class="small muted">Lo ideal es crear un mapa en Google My Maps con una capa por ciudad y otra por día. Luego usa “Compartir” → “Insertar en mi sitio” y reemplaza cada iframe. Así tendrás puntos, colores, comentarios y rutas reales.</p>
-        </article>
-        <article class="card utility">
-          <h4 style="margin-top:0">2. Qué pulir después</h4>
-          <p class="small muted">Antes de cerrar la versión final, conviene añadir transporte exacto desde cada alojamiento, horarios de trenes/buses elegidos y links oficiales de compra para las entradas con franja horaria.</p>
-        </article>
-        <article class="card utility">
-          <h4 style="margin-top:0">3. Qué ya quedó bien armado</h4>
-          <p class="small muted">La estructura general del viaje, el orden lógico de las visitas, el reparto de energía y el balance entre lo turístico, lo espiritual y lo familiar. Además, los checklists ahora son clicables y guardan su estado en este navegador.</p>
-        </article>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>Diseñado como guía visual de viaje. Datos y horarios sensibles revisados en fuentes oficiales antes de esta versión: Vaticano, Coliseo, Pantheon, Versalles, Lourdes, Fátima, Oceanogràfic y Catedral de Valencia.</p>
-    </footer>
-  </main>
-
-  <script>
+<tr><td>08:00</td><td>Entrada a San Pedro + fila</td><td>€0</td><td>Ir con margen para seguridad y para subir sin afán.</td></tr><tr><td>08:30–09:15</td><td>Cúpula del Vaticano</td><td>€22</td><td>Subida reservada/organizada, ideal antes de misa y plaza.</td></tr><tr><td>09:30</td><td>Misa</td><td>€0</td><td>Muy buena franja para enlazar con la plaza.</td></tr><tr><td>12:00</td><td>Regina Caeli</td><td>€0</td><td>Momento central del domingo.</td></tr><tr><td>15:30–18:00</td><td>Castel Sant'Angelo</td><td>€16</td><td>Buena continuación en la zona.</td></tr></table><p class="day-total">Subtotal del día: €38</p>
+</div>
+<div class="itinerary-day">
+<h5>11 mayo · Asís</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>07:00–09:30</td><td>Tren Roma → Asís</td><td>€35–60</td><td>Comprar con tiempo cuando elijáis horario.</td></tr>
+<tr><td>10:30–17:00</td><td>Basílica San Francesco + Santa Chiara + pueblo</td><td>€0</td><td>Día redondo y distinto a Roma.</td></tr>
+<tr><td>18:00–21:00</td><td>Vuelta a Roma</td><td>€35–60</td><td>Sin cambiar de hotel.</td></tr>
+</table><p class="day-total">Subtotal del día: €35–60</p>
+</div>
+<div class="itinerary-day">
+<h5>12 mayo · Museos Vaticanos + salida</h5>
+<table>
+<tr><th>Hora</th><th>Plan</th><th>Entrada</th><th>Notas</th></tr>
+<tr><td>08:30–12:30</td><td>Museos Vaticanos + Sixtina</td><td>€25</td><td>Reservar primera franja.</td></tr>
+<tr><td>18:00–18:30</td><td>Salida al aeropuerto</td><td>€0</td><td>Vuelo 21:24 desde Fiumicino; llegada 23:35 a Valencia.</td></tr>
+</table><p class="day-total">Subtotal del día: €25</p>
+</div>
+</article>
+</div>
+<div>
+<article class="card block">
+<h4>Checklist</h4>
+<ul class="checklist"><li><input style="margin-right:10px" type="checkbox"/>Coliseo</li><li><input style="margin-right:10px" type="checkbox"/>Foro + Palatino</li><li><input style="margin-right:10px" type="checkbox"/>Pantheon</li><li><input style="margin-right:10px" type="checkbox"/>Basílica de San Pedro</li><li><input style="margin-right:10px" type="checkbox"/>Cúpula del Vaticano</li><li><input style="margin-right:10px" type="checkbox"/>Regina Caeli</li><li><input style="margin-right:10px" type="checkbox"/>Castel Sant'Angelo</li><li><input style="margin-right:10px" type="checkbox"/>Museos Vaticanos</li><li><input style="margin-right:10px" type="checkbox"/>Capilla Sixtina</li><li><input style="margin-right:10px" type="checkbox"/>Asís</li></ul>
+</article>
+<article class="card block"><h4>Presupuesto estimado</h4><div class="budget"><span>Pantheon</span><strong>€5</strong></div><div class="budget"><span>Coliseo + Foro + Palatino</span><strong>€18</strong></div><div class="budget"><span>Cúpula del Vaticano</span><strong>€22</strong></div><div class="budget"><span>Castel Sant'Angelo</span><strong>€16</strong></div><div class="budget"><span>Museos Vaticanos + reserva</span><strong>€25</strong></div><div class="budget"><span>Transporte urbano</span><strong>€12–20</strong></div><div class="budget"><span>Tren a Asís</span><strong>€35–60</strong></div><div class="budget"><span><strong>Total estimado</strong></span><strong>€135–212</strong></div></article>
+<article class="card block">
+<h4>Mapa</h4>
+<div class="map-wrap">
+<iframe loading="lazy" src="https://maps.google.com/maps?q=Pantheon%20Rome%20Colosseum%20St%20Peter's%20Basilica%20Trevi%20Fountain%20Castel%20Sant'Angelo&amp;z=12&amp;output=embed"></iframe>
+</div>
+<div class="route-links">
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Colosseum+Rome" target="_blank">Abrir ruta al Coliseo</a>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=St+Peter%27s+Basilica" target="_blank">Abrir ruta al Vaticano</a>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Assisi" target="_blank">Abrir ruta a Asís</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="notes">
+<h3>Notas útiles para la versión final</h3>
+<div class="utility-grid">
+<article class="card utility">
+<h4 style="margin-top:0">1. Cómo meter rutas exactas</h4>
+<p class="small muted">Lo ideal es crear un mapa en Google My Maps con una capa por ciudad y otra por día. Luego usa “Compartir” → “Insertar en mi sitio” y reemplaza cada iframe. Así tendrás puntos, colores, comentarios y rutas reales.</p>
+</article>
+<article class="card utility">
+<h4 style="margin-top:0">2. Qué pulir después</h4>
+<p class="small muted">Antes de cerrar la versión final, conviene añadir transporte exacto desde cada alojamiento, horarios de trenes/buses elegidos y links oficiales de compra para las entradas con franja horaria.</p>
+</article>
+<article class="card utility">
+<h4 style="margin-top:0">3. Qué ya quedó bien armado</h4>
+<p class="small muted">La estructura general del viaje, el orden lógico de las visitas, el reparto de energía y el balance entre lo turístico, lo espiritual y lo familiar.</p>
+</article>
+</div>
+</section>
+<footer class="footer">
+<p>Diseñado como guía visual de viaje. Datos y horarios sensibles revisados en fuentes oficiales antes de esta versión: Vaticano, Coliseo, Pantheon, Versalles, Lourdes, Fátima, Oceanogràfic y Catedral de Valencia.</p>
+</footer>
+</main>
+<script>
     const buttons = document.querySelectorAll('.tab-btn');
     const panels = document.querySelectorAll('.tab-panel');
     buttons.forEach(btn => {
@@ -901,26 +783,6 @@
         panels.forEach(p => p.classList.remove('active'));
         btn.classList.add('active');
         document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
-      });
-    });
-
-    document.querySelectorAll('.checklist li').forEach((li, index) => {
-      const panel = li.closest('.tab-panel');
-      const scope = panel ? panel.id : 'overview';
-      const text = li.textContent.trim();
-      const key = `trip-check-${scope}-${index}`;
-      const checked = localStorage.getItem(key) === '1';
-      li.innerHTML = `<label class="check-item ${checked ? 'done' : ''}"><input type="checkbox" ${checked ? 'checked' : ''} /><span>${text}</span></label>`;
-      const input = li.querySelector('input');
-      const label = li.querySelector('.check-item');
-      input.addEventListener('change', () => {
-        if (input.checked) {
-          localStorage.setItem(key, '1');
-          label.classList.add('done');
-        } else {
-          localStorage.removeItem(key);
-          label.classList.remove('done');
-        }
       });
     });
   </script>
