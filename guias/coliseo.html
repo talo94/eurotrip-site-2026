@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roma — Coliseo y Foro</title>
+    <style>
+      :root {
+        --bg: #f7f2ec;
+        --paper: rgba(255, 252, 247, 0.88);
+        --ink: #3d322b;
+        --muted: #7a6a5f;
+        --accent: #b77963;
+        --line: rgba(122, 106, 95, 0.18);
+        --shadow: 0 18px 50px rgba(84, 63, 51, 0.12);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(232, 212, 200, 0.8),
+            transparent 34%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(244, 231, 223, 0.9),
+            transparent 28%
+          ),
+          linear-gradient(180deg, #fbf7f3 0%, var(--bg) 100%);
+        line-height: 1.9;
+      }
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 56px 24px 96px;
+      }
+      .hero {
+        padding: 40px 28px 32px;
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.72),
+          rgba(255, 252, 247, 0.92)
+        );
+        box-shadow: var(--shadow);
+        border-radius: 32px;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(183, 121, 99, 0.08),
+          transparent 45%
+        );
+      }
+      .eyebrow {
+        margin: 0 0 10px;
+        font-size: 0.78rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(2.4rem, 6vw, 4.6rem);
+        line-height: 1.05;
+        font-weight: 500;
+      }
+      .subtitle {
+        margin: 16px 0 0;
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 1.03rem;
+      }
+      .content {
+        margin-top: 28px;
+        display: grid;
+        gap: 20px;
+      }
+      .section {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px 24px;
+        box-shadow: 0 10px 30px rgba(84, 63, 51, 0.06);
+        backdrop-filter: blur(8px);
+      }
+      .section h2 {
+        margin: 0 0 18px;
+        font-size: 1.35rem;
+        font-weight: 500;
+        color: var(--accent);
+      }
+      .section p {
+        margin: 0;
+        white-space: pre-line;
+        font-size: 1.04rem;
+      }
+      .footer-note {
+        margin-top: 22px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      @media (max-width: 640px) {
+        .page {
+          padding: 24px 14px 56px;
+        }
+        .hero {
+          padding: 28px 20px 24px;
+          border-radius: 24px;
+        }
+        .section {
+          padding: 22px 18px;
+          border-radius: 22px;
+        }
+        .section p {
+          font-size: 0.98rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Audioguía</p>
+        <h1>Coliseo y Foro</h1>
+        <p class="subtitle">
+          El corazón de la Roma antigua: política, poder y espectáculo, narrado
+          en formato continuo para lectura o grabación.
+        </p>
+      </header>
+
+      <section class="content">
+        <article class="section">
+          <h2>Guion completo</h2>
+          <p>
+            Ahora sí. Estás entrando en uno de los lugares más importantes de la
+            historia de la humanidad. Y esto no es una exageración. Porque lo
+            que vas a ver a continuación… no son simplemente ruinas. Es el lugar
+            donde se tomaron decisiones que cambiaron el rumbo del mundo. Antes
+            de hablar del Coliseo, quiero que hagas algo. Mira el terreno.
+            Observa cómo todo está abierto, extendido, irregular. Columnas
+            sueltas. Restos de edificios. Caminos que ya no llevan a ninguna
+            parte evidente. Puede parecer caótico. Pero no lo es. Esto fue el
+            Foro Romano. El verdadero corazón de Roma. Aquí no estaba el
+            entretenimiento. Aquí estaba la vida real. Si Roma era el centro del
+            mundo… esto era su núcleo. Imagínalo lleno. No de turistas. Sino de
+            ciudadanos romanos. Senadores. Comerciantes. Sacerdotes. Soldados.
+            Aquí se discutía política. Aquí se hacían juicios. Aquí se firmaban
+            acuerdos. Aquí se anunciaban victorias. Aquí se decidía el destino
+            de territorios enteros. El Foro no era un solo edificio. Era un
+            conjunto de espacios. Templos. Basílicas. Arcos. Plazas. Todo
+            organizado… pero también evolucionando con el tiempo. Porque el Foro
+            no se construyó de una vez. Se fue transformando durante siglos.
+            Ahora, mientras caminas, imagina el ruido. Discursos. Debates.
+            Multitudes. El sonido de una ciudad que no dormía. Y en medio de
+            todo eso… una figura. Julio César. César no solo pasó por aquí.
+            César dominó este espacio. Pero para entender su historia aquí…
+            tenemos que retroceder un poco. César no nació siendo el hombre más
+            poderoso de Roma. Nació en una familia patricia, sí. Pero no
+            especialmente dominante en ese momento. Fue construyendo su poder.
+            Paso a paso. Primero como político. Luego como militar. Y
+            finalmente… como algo más peligroso. Como una figura que empezaba a
+            concentrar demasiado poder. En Roma, eso siempre generaba tensión.
+            Porque la memoria de la monarquía… seguía presente. Roma había
+            expulsado a sus reyes. Y no quería volver a eso. Pero César empezó a
+            acercarse a ese límite. Después de sus campañas en la Galia… después
+            de sus victorias… después de cruzar el Rubicón… ya no era solo un
+            general. Era el hombre más poderoso de Roma. Y aquí, en el Foro… ese
+            poder se hacía visible. Sus discursos. Sus decisiones. Sus reformas.
+            Todo pasaba por este espacio. Pero el poder absoluto… genera miedo.
+            Y ese miedo… se convirtió en conspiración. El 15 de marzo del año 44
+            antes de Cristo. Los Idus de marzo. César fue al Senado. Entró. Sin
+            sospechar lo que iba a ocurrir. Y entonces… comenzó el ataque. No
+            fue un asesinato inmediato. No fue un golpe limpio. Fueron múltiples
+            hombres. Múltiples cuchillos. Uno tras otro. Más de veinte heridas.
+            Entre los atacantes estaba Bruto. Alguien cercano. Y ese momento…
+            ese instante… se convirtió en uno de los más recordados de la
+            historia. No solo por la muerte. Sino por lo que representaba. Un
+            sistema político intentando salvarse… destruyendo al hombre que lo
+            estaba cambiando. Pero aquí está la parte más importante. No
+            funcionó. Matar a César no salvó la República. La destruyó. Porque
+            después de su muerte… Roma no volvió al equilibrio. Entró en otra
+            guerra civil. Más violenta. Más definitiva. Y de ese caos… surgió el
+            Imperio. Así que cuando estás aquí… no estás solo en un sitio
+            histórico. Estás en el punto exacto donde una forma de gobierno
+            terminó. Y otra comenzó. Ahora, lentamente, deja atrás el Foro. Y
+            empieza a caminar hacia el Coliseo. Y aquí… el cambio es inmediato.
+            Porque si el Foro era política… el Coliseo es espectáculo. Pero no
+            un espectáculo cualquiera. El Coliseo es poder. Construido en el
+            siglo I después de Cristo… bajo el emperador Vespasiano… y terminado
+            por su hijo Tito. Forma parte de una dinastía que necesitaba algo
+            muy específico. Legitimidad. Después de años de caos y guerras
+            internas… Roma necesitaba estabilidad. Y los emperadores entendieron
+            algo fundamental. El pueblo necesita estar ocupado. Y así nace una
+            de las ideas más famosas de la historia romana. Pan y circo. Comida…
+            y entretenimiento. Pero el Coliseo no es solo grande. Es
+            increíblemente sofisticado. Podía albergar más de 50,000 personas.
+            Tenía sistemas de acceso organizados. Entradas diferenciadas por
+            clase social. Sistemas subterráneos… donde se preparaban los
+            animales, los gladiadores, los escenarios. Nada aquí era
+            improvisado. Todo estaba diseñado. Ahora imagina un día de evento.
+            El público entrando. El ruido. La expectativa. El emperador sentado
+            en su palco. Y abajo… la arena. Gladiadores. No eran simplemente
+            esclavos peleando. Muchos eran entrenados. Especializados. Había
+            tipos distintos. Estilos distintos. Y aunque la muerte era posible…
+            no todas las luchas terminaban así. Pero eso no era lo único.
+            También había cacerías de animales. Leones. Tigres. Elefantes.
+            Traídos desde distintas partes del imperio. El Coliseo era una
+            demostración de poder. Roma mostrando que dominaba no solo
+            territorios… sino también la naturaleza. Y en algunos casos… también
+            ejecuciones públicas. Porque el espectáculo también incluía castigo.
+            Pero lo más importante no es lo que ocurría en la arena. Es lo que
+            ocurría en la mente del público. Distracción. Control. El Coliseo no
+            era solo entretenimiento. Era una herramienta política. Mientras el
+            pueblo miraba… el poder se mantenía estable. Y ahora, míralo de
+            nuevo. En silencio. Sin multitudes. Sin espectáculo. Solo piedra.
+            Pero esa piedra… ha visto todo. El auge del imperio. Su estabilidad.
+            Y su transformación. Porque con el tiempo… el Coliseo dejó de
+            usarse. El imperio cambió. El cristianismo se expandió. Y este
+            lugar… pasó de ser símbolo de poder… a convertirse en ruina. Pero no
+            desapareció. Porque en Roma… nada desaparece del todo. Todo se
+            transforma. Y ahora, después de haber estado en el Foro… y en el
+            Coliseo… ya entiendes algo fundamental. Roma no es solo historia. Es
+            una secuencia de decisiones. Y tú… acabas de caminar por algunas de
+            las más importantes.
+          </p>
+        </article>
+      </section>
+
+      <p class="footer-note">
+        Segundo archivo de Roma. Mantiene coherencia visual con el resto de
+        audioguías.
+      </p>
+    </main>
+  </body>
+</html>

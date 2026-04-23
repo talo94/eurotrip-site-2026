@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lisboa — Audioguía</title>
+    <style>
+      :root {
+        --bg: #f7f2ec;
+        --paper: rgba(255, 252, 247, 0.88);
+        --ink: #3d322b;
+        --muted: #7a6a5f;
+        --accent: #b77963;
+        --accent-soft: #e8d4c8;
+        --line: rgba(122, 106, 95, 0.18);
+        --shadow: 0 18px 50px rgba(84, 63, 51, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(232, 212, 200, 0.8),
+            transparent 34%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(244, 231, 223, 0.9),
+            transparent 28%
+          ),
+          linear-gradient(180deg, #fbf7f3 0%, var(--bg) 100%);
+        line-height: 1.85;
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 56px 24px 96px;
+      }
+
+      .hero {
+        padding: 40px 28px 32px;
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.72),
+          rgba(255, 252, 247, 0.92)
+        );
+        box-shadow: var(--shadow);
+        border-radius: 32px;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(183, 121, 99, 0.08),
+          transparent 45%
+        );
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        font-size: 0.78rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.4rem, 6vw, 4.6rem);
+        line-height: 1.05;
+        font-weight: 500;
+      }
+
+      .subtitle {
+        margin: 16px 0 0;
+        max-width: 700px;
+        color: var(--muted);
+        font-size: 1.03rem;
+      }
+
+      .content {
+        margin-top: 28px;
+        display: grid;
+        gap: 20px;
+      }
+
+      .section {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px 24px;
+        box-shadow: 0 10px 30px rgba(84, 63, 51, 0.06);
+        backdrop-filter: blur(8px);
+      }
+
+      .section h2 {
+        margin: 0 0 18px;
+        font-size: 1.35rem;
+        font-weight: 500;
+        color: var(--accent);
+      }
+
+      .section p {
+        margin: 0 0 16px;
+        white-space: pre-line;
+        font-size: 1.03rem;
+      }
+
+      .section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .footer-note {
+        margin-top: 22px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          padding: 24px 14px 56px;
+        }
+        .hero {
+          padding: 28px 20px 24px;
+          border-radius: 24px;
+        }
+        .section {
+          padding: 22px 18px;
+          border-radius: 22px;
+        }
+        .section p {
+          font-size: 0.98rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Audioguía</p>
+        <h1>Lisboa</h1>
+        <p class="subtitle">
+          Guion completo por paradas para leer o grabar, con una estética
+          limpia, cálida y pensada para conservar todo el texto final.
+        </p>
+      </header>
+
+      <section class="content">
+        <article class="section">
+          <h2>Introducción</h2>
+          <p>
+            Bienvenidas a Lisboa. Hoy no vamos a recorrer simplemente una
+            ciudad… vamos a recorrer una historia que empezó hace más de dos mil
+            años, y que en muchos momentos cambió el rumbo del mundo. Lisboa es
+            una de las ciudades más antiguas de Europa. Más antigua que Roma,
+            que París o que Londres. Y eso se siente desde el primer momento en
+            que uno camina por sus calles. Pero hay algo importante que tienes
+            que entender desde el inicio. Lisboa no es una ciudad plana, ni
+            ordenada, ni fácil. Lisboa es una ciudad que se adapta. Está
+            construida sobre siete colinas, frente al río Tajo, y eso hace que
+            todo en ella sea movimiento, subidas, bajadas, miradores
+            inesperados… y vistas que aparecen de repente. Y ese río que ves… no
+            es cualquier río. Es la puerta al océano Atlántico. Es lo que
+            convirtió a Portugal en una potencia mundial en el siglo XV. Desde
+            aquí partieron exploradores hacia lo desconocido. Pero Lisboa
+            también es una ciudad marcada por la tragedia. En 1755, un terremoto
+            destruyó casi toda la ciudad. Y lo que vamos a ver hoy… es el
+            resultado de cómo una ciudad puede caer completamente… y volver a
+            levantarse.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 1 — Praça do Comércio</h2>
+          <p>
+            Ahora quiero que mires a tu alrededor. Estás en la Praça do
+            Comércio. Este lugar, tan abierto, tan organizado, tan armonioso… no
+            siempre fue una plaza. Aquí estaba el Palacio Real, el centro del
+            poder en Portugal durante siglos. Hasta que llegó el terremoto de
+            1755. Era el primero de noviembre. La ciudad estaba llena de gente
+            en iglesias. Cuando empezó a temblar, los edificios colapsaron.
+            Luego el río se retiró… y volvió como un tsunami. Y después vinieron
+            incendios que duraron días. Lisboa quedó destruida. Pero lo más
+            importante es lo que vino después. El Marqués de Pombal tomó el
+            control de la reconstrucción y transformó completamente la ciudad.
+            Las calles se hicieron rectas, amplias. Los edificios se diseñaron
+            con estructuras internas flexibles para resistir terremotos. Fue uno
+            de los primeros ejemplos de urbanismo moderno en Europa. Así que
+            esta plaza no es solo bonita. Es el símbolo de una ciudad que
+            decidió empezar de nuevo.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 2 — Arco y Rua Augusta</h2>
+          <p>
+            Empieza a caminar hacia el arco. Antes de cruzarlo, levanta la
+            mirada. Este arco celebra la reconstrucción de Lisboa. En él
+            aparecen figuras como Vasco da Gama, uno de los grandes navegantes
+            portugueses. Este arco no recuerda el desastre… recuerda la
+            capacidad de levantarse después de él. Ahora sí, cruza. Estás
+            entrando en la Rua Augusta. La calle principal de la Lisboa moderna.
+            Aquí todo es ordenado, recto, planificado. Esta calle representa la
+            nueva ciudad que surgió después del caos. Después del desastre… vino
+            el orden.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 3 — Elevador de Santa Justa</h2>
+          <p>
+            Ahora levanta la vista. Ese elevador de hierro es el Elevador de
+            Santa Justa. Fue diseñado por un ingeniero influenciado por Gustave
+            Eiffel. Su función es conectar la ciudad baja con la ciudad alta.
+            Lisboa no se diseñó plana… se adaptó a su geografía. Y este tipo de
+            estructuras permitieron que la ciudad funcionara mejor. Pero ahora
+            vamos a dejar atrás esta Lisboa ordenada… y vamos a entrar en otra
+            completamente distinta.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 4 — Alfama</h2>
+          <p>
+            A medida que caminas, fíjate en cómo cambian las calles. Se vuelven
+            más estrechas, más irregulares. Este es Alfama. El barrio más
+            antiguo de Lisboa. Y algo muy importante: sobrevivió al terremoto.
+            Aquí estás caminando por una estructura urbana mucho más antigua.
+            Este barrio tiene una fuerte influencia musulmana. Las calles
+            estrechas no son un error, son una estrategia: generan sombra,
+            dificultan el paso de invasores y crean espacios más frescos.
+            Incluso el nombre “Alfama” viene del árabe. Y aquí nació el fado. La
+            música más tradicional de Portugal. Habla de la saudade… una mezcla
+            de nostalgia, melancolía y deseo. El fado no se explica. Se siente.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 5 — Catedral de Lisboa</h2>
+          <p>
+            Ahora estás frente a la Catedral de Lisboa. La Sé. Fue construida en
+            el siglo XII, después de la reconquista cristiana. Y si parece una
+            fortaleza… es porque debía serlo. Lisboa era una ciudad disputada, y
+            los edificios religiosos también cumplían funciones defensivas. Pero
+            lo más interesante no es solo lo que ves. Debajo de esta catedral
+            hay restos romanos… y musulmanes. Otra vez, capas de historia
+            superpuestas en un mismo lugar.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 6 — Miradores</h2>
+          <p>
+            Ahora detente en un mirador. Mira la ciudad. Los tejados rojos. Las
+            colinas. El río. Lisboa no se recorre en línea recta. Lisboa se
+            contempla. Aquí entiendes cómo la ciudad se adapta al terreno, cómo
+            crece sin un orden rígido. Y eso es parte de su encanto.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Transición — Hacia Belém</h2>
+          <p>
+            Ahora vamos a cambiar completamente de época. Nos vamos al momento
+            en que Portugal dominaba los mares.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 7 — Torre de Belém</h2>
+          <p>
+            Esta torre marcaba el punto de salida de los exploradores. Desde
+            aquí partieron viajes que conectaron Europa con otros continentes.
+            Como los de Vasco da Gama. Si observas los detalles, verás elementos
+            marítimos: cuerdas, conchas, símbolos del mar. Esto es el estilo
+            manuelino. Un estilo único de Portugal que celebra su poder
+            marítimo.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 8 — Monasterio de los Jerónimos</h2>
+          <p>
+            Este es uno de los edificios más importantes de Portugal. Fue
+            construido con la riqueza de los viajes marítimos. Su arquitectura
+            es compleja, llena de detalles, con elementos que recuerdan al mar.
+            Aquí está enterrado Vasco da Gama. Este lugar representa el momento
+            en que Portugal conectó el mundo.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 9 — Pastéis de Belém</h2>
+          <p>
+            Y ahora, una última parada. Los famosos Pastéis de Belém. Esta
+            receta fue creada por monjes. Y hasta hoy se mantiene casi intacta.
+            Porque la historia no solo está en los edificios. También está en lo
+            que comemos.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Cierre</h2>
+          <p>
+            Lisboa es una ciudad que ha vivido de todo. Grandeza… destrucción…
+            reconstrucción. Una ciudad que no desapareció… se transformó. Y
+            mientras caminas por ella… te das cuenta de algo. Lisboa no es
+            perfecta. Pero es real. Y eso… es lo que la hace inolvidable.
+          </p>
+        </article>
+      </section>
+
+      <p class="footer-note">
+        Archivo base para la web de guías. Cada ciudad puede seguir este mismo
+        lenguaje visual.
+      </p>
+    </main>
+  </body>
+</html>

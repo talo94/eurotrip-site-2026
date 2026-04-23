@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fátima — Audioguía</title>
+    <style>
+      :root {
+        --bg: #f7f2ec;
+        --paper: rgba(255, 252, 247, 0.88);
+        --ink: #3d322b;
+        --muted: #7a6a5f;
+        --accent: #b77963;
+        --accent-soft: #e8d4c8;
+        --line: rgba(122, 106, 95, 0.18);
+        --shadow: 0 18px 50px rgba(84, 63, 51, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(232, 212, 200, 0.8),
+            transparent 34%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(244, 231, 223, 0.9),
+            transparent 28%
+          ),
+          linear-gradient(180deg, #fbf7f3 0%, var(--bg) 100%);
+        line-height: 1.85;
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 56px 24px 96px;
+      }
+
+      .hero {
+        padding: 40px 28px 32px;
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.72),
+          rgba(255, 252, 247, 0.92)
+        );
+        box-shadow: var(--shadow);
+        border-radius: 32px;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(183, 121, 99, 0.08),
+          transparent 45%
+        );
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        font-size: 0.78rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.4rem, 6vw, 4.6rem);
+        line-height: 1.05;
+        font-weight: 500;
+      }
+
+      .subtitle {
+        margin: 16px 0 0;
+        max-width: 700px;
+        color: var(--muted);
+        font-size: 1.03rem;
+      }
+
+      .content {
+        margin-top: 28px;
+        display: grid;
+        gap: 20px;
+      }
+
+      .section {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px 24px;
+        box-shadow: 0 10px 30px rgba(84, 63, 51, 0.06);
+        backdrop-filter: blur(8px);
+      }
+
+      .section h2 {
+        margin: 0 0 18px;
+        font-size: 1.35rem;
+        font-weight: 500;
+        color: var(--accent);
+      }
+
+      .section p {
+        margin: 0 0 16px;
+        white-space: pre-line;
+        font-size: 1.03rem;
+      }
+
+      .section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .footer-note {
+        margin-top: 22px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          padding: 24px 14px 56px;
+        }
+        .hero {
+          padding: 28px 20px 24px;
+          border-radius: 24px;
+        }
+        .section {
+          padding: 22px 18px;
+          border-radius: 22px;
+        }
+        .section p {
+          font-size: 0.98rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Audioguía</p>
+        <h1>Fátima</h1>
+        <p class="subtitle">
+          Guion completo por paradas, con enfoque católico y espiritual,
+          conservando el estilo visual cálido y elegante de la colección.
+        </p>
+      </header>
+
+      <section class="content">
+        <article class="section">
+          <h2>Introducción</h2>
+          <p>
+            Bienvenidas a Fátima. Hoy no estamos visitando simplemente una
+            ciudad… estamos entrando en uno de los lugares de peregrinación más
+            importantes del mundo católico. Fátima no es grande, no es antigua
+            como otras ciudades europeas… pero lo que ocurrió aquí en 1917…
+            cambió la historia espiritual del siglo XX. Millones de personas
+            vienen cada año desde todas partes del mundo… no solo como turistas,
+            sino como peregrinos. Personas que llegan con fe, con preguntas, con
+            promesas… y muchas veces, con la esperanza de encontrar respuestas.
+            Para entender Fátima, hay que volver a un momento muy específico. El
+            año 1917. Europa estaba en guerra. La Primera Guerra Mundial
+            devastaba el continente. Portugal vivía inestabilidad política… y en
+            medio de todo eso… en un pequeño pueblo rural… tres niños afirmaron
+            haber visto a la Virgen María. Y lo que empezó como algo pequeño…
+            terminó convirtiéndose en uno de los fenómenos religiosos más
+            importantes del mundo moderno.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 1 — Explanada del Santuario</h2>
+          <p>
+            Ahora quiero que mires el espacio en el que estás. Esta es la
+            explanada del Santuario de Fátima. Y lo primero que llama la
+            atención… es su tamaño. Es enorme. De hecho, es el doble de grande
+            que la Plaza de San Pedro en el Vaticano. Y eso no es casualidad.
+            Este espacio está pensado para recibir multitudes. Peregrinos que
+            llegan caminando, algunos desde muy lejos… personas que vienen a
+            rezar, a agradecer, a pedir. Si observas con atención… puede que
+            veas algo muy característico de Fátima. Personas avanzando de
+            rodillas. No es un espectáculo. Es un acto de fe. Muchos peregrinos
+            hacen promesas… y las cumplen de esta manera. En silencio. Con
+            esfuerzo. Con intención. Aquí no estás en un lugar turístico. Estás
+            en un lugar profundamente espiritual.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 2 — Capilla de las Apariciones</h2>
+          <p>
+            Ahora acércate a la Capilla de las Apariciones. Este es el corazón
+            de Fátima. Todo gira alrededor de este punto. Aquí fue donde, según
+            los testimonios, la Virgen María se apareció a tres niños pastores:
+            Lucía, Francisco y Jacinta. Las apariciones comenzaron el 13 de mayo
+            de 1917. Y se repitieron el día 13 de cada mes… hasta octubre.
+            Durante esos encuentros, la Virgen les transmitió mensajes. Mensajes
+            que giraban en torno a: La oración. La conversión. El
+            arrepentimiento. Y la paz. Los tres niños eran sencillos, pastores,
+            sin educación sofisticada. Y eso es parte importante del mensaje.
+            Las apariciones no ocurrieron a líderes, ni a poderosos… ocurrieron
+            a niños. Mira la imagen de la Virgen. Lleva una corona. Dentro de
+            esa corona… hay algo muy especial. Una bala. Es la bala que casi
+            mata a Juan Pablo II en 1981. Él mismo pidió que fuera colocada
+            allí… porque creía que la Virgen de Fátima había salvado su vida.
+            Este lugar no representa solo un evento… representa un mensaje que
+            millones de personas siguen hoy.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 3 — Basílica de Nuestra Señora del Rosario</h2>
+          <p>
+            Ahora dirígete hacia la basílica principal. La Basílica de Nuestra
+            Señora del Rosario. Fue construida en el lugar donde los niños
+            afirmaron ver a la Virgen. Su arquitectura es neoclásica. Muy
+            sobria. Muy luminosa. Esto no busca impresionar… busca recogimiento.
+            Aquí están enterrados los tres niños. Francisco, Jacinta… y más
+            tarde, Lucía. Francisco y Jacinta fueron canonizados. Son santos.
+            Dos de los santos más jóvenes de la Iglesia Católica. La Virgen
+            pidió especialmente una cosa: Rezar el rosario. Por eso esta
+            basílica está dedicada a Nuestra Señora del Rosario.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 4 — Basílica de la Santísima Trinidad</h2>
+          <p>
+            Ahora observa este edificio completamente distinto. La Basílica de
+            la Santísima Trinidad. Esta es una iglesia moderna. Fue inaugurada
+            en 2007. Puede albergar más de 8,000 personas. Y eso muestra algo
+            muy importante. Fátima no es solo historia. Es presente. Es un lugar
+            que sigue recibiendo millones de peregrinos. La fe aquí no es
+            pasado… es algo vivo.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Parada 5 — Procesión y velas</h2>
+          <p>
+            Si tienes la oportunidad de estar aquí al anochecer… vas a vivir uno
+            de los momentos más especiales. La procesión de las velas. Miles de
+            personas en silencio… sosteniendo velas… cantando… rezando… No es un
+            espectáculo. Es una experiencia colectiva de fe. Fátima no se
+            explica… se vive.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Cierre</h2>
+          <p>
+            Fátima es un lugar distinto. No impresiona por su tamaño… ni por su
+            antigüedad. Impresiona por lo que representa. Un mensaje sencillo…
+            transmitido a tres niños… que terminó llegando a todo el mundo.
+            Aquí, millones de personas vienen a pedir… a agradecer… a creer. Y
+            aunque cada persona llega con una historia distinta… muchos se van
+            con algo en común. Paz.
+          </p>
+        </article>
+      </section>
+
+      <p class="footer-note">
+        Archivo base para la colección de audioguías. Mantiene la misma
+        estructura visual que Lisboa.
+      </p>
+    </main>
+  </body>
+</html>

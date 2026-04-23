@@ -1,0 +1,600 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@400;500&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #C8933A;
+    --gold-light: #F0C96A;
+    --deep: #1A1008;
+    --warm: #3D2B10;
+    --cream: #FAF5EC;
+    --rust: #8B3A1A;
+    --teal-col: #1D6B6E;
+    --teal-light: #E1F3F4;
+    --border-c: rgba(200,147,58,0.25);
+  }
+
+  .page {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--color-background-primary);
+    padding: 2.5rem 2rem;
+    max-width: 680px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 2rem;
+    background: var(--color-background-secondary);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-ornament {
+    font-size: 36px;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero h1 span {
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-top: 0.2rem;
+  }
+
+  .hero-sub {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'DM Mono', monospace;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 1.75rem 0;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 0.5px;
+    background: var(--color-border-tertiary);
+  }
+
+  .divider-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-border-secondary);
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.25rem;
+  }
+
+  /* ITINERARIO */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .city-card {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0 1.25rem;
+    position: relative;
+  }
+
+  .city-card:not(:last-child) .card-line {
+    position: absolute;
+    left: 89px;
+    top: 36px;
+    bottom: -16px;
+    width: 0.5px;
+    background: var(--color-border-tertiary);
+  }
+
+  .city-dates {
+    text-align: right;
+    padding-top: 0.6rem;
+  }
+
+  .city-dates .day-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1;
+  }
+
+  .city-dates .month-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+  }
+
+  .city-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-text-primary);
+    border: 2px solid var(--color-background-primary);
+    box-shadow: 0 0 0 1px var(--color-border-secondary);
+    position: absolute;
+    left: 85px;
+    top: 12px;
+  }
+
+  .city-body {
+    padding: 0.5rem 0 1.75rem 1rem;
+    border-left: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .city-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+
+  .city-meta {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+
+  .city-badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    background: var(--color-background-secondary);
+    color: var(--color-text-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    font-weight: 500;
+  }
+
+  .arrival-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.1rem;
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    margin-bottom: 1.5rem;
+    background: var(--color-background-secondary);
+  }
+
+  .arrival-icon {
+    font-size: 20px;
+    opacity: 0.7;
+  }
+
+  .arrival-text {
+    flex: 1;
+  }
+
+  .arrival-text strong {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    display: block;
+  }
+
+  .arrival-text small {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* MONTAJE */
+  .cuadros-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 520px) {
+    .cuadros-grid { grid-template-columns: 1fr; }
+  }
+
+  .cuadro-card {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+  }
+
+  .cuadro-header {
+    padding: 0.75rem 1rem;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .cuadro-header.andino { background: var(--color-background-info); }
+  .cuadro-header.antioquia { background: var(--color-background-warning); }
+  .cuadro-header.caribe { background: var(--color-background-success); }
+
+  .cuadro-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+
+  .cuadro-header.andino .cuadro-title { color: var(--color-text-info); }
+  .cuadro-header.antioquia .cuadro-title { color: var(--color-text-warning); }
+  .cuadro-header.caribe .cuadro-title { color: var(--color-text-success); }
+
+  .cuadro-songs {
+    padding: 0.75rem 1rem;
+    list-style: none;
+  }
+
+  .cuadro-songs li {
+    font-size: 12.5px;
+    color: var(--color-text-primary);
+    padding: 4px 0;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    line-height: 1.4;
+  }
+
+  .cuadro-songs li:last-child { border-bottom: none; }
+
+  .song-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    min-width: 14px;
+    font-weight: 500;
+  }
+
+  .pending {
+    color: var(--color-text-secondary);
+    font-style: italic;
+    font-size: 11.5px;
+  }
+
+  /* INSTRUMENTOS */
+  .instruments-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 0.75rem;
+  }
+
+  .instrument-tag {
+    padding: 5px 14px;
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--color-text-primary);
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    background: var(--color-background-primary);
+  }
+
+  .add-pending {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    font-family: 'DM Mono', monospace;
+    font-style: normal;
+  }
+
+  /* MUSICOS */
+  .musicos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .musico-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    background: var(--color-background-primary);
+  }
+
+  .musico-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-background-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    flex-shrink: 0;
+  }
+
+  .musico-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  .musico-role {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+
+  .musico-anon {
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+
+  .director-badge {
+    margin-left: auto;
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    background: var(--color-background-secondary);
+    color: var(--color-text-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+</style>
+
+<div class="page">
+
+  <div class="hero">
+    <div class="hero-ornament">🪘</div>
+    <h1>Iramawi
+      <span>Gira Grecia 2026</span>
+    </h1>
+    <div class="hero-sub">Música Folclórica Colombiana &nbsp;·&nbsp; 24 jun — 8 jul</div>
+  </div>
+
+  <!-- ITINERARIO -->
+  <div class="section-label">Itinerario</div>
+
+  <div class="arrival-card">
+    <div class="arrival-icon">✈️</div>
+    <div class="arrival-text">
+      <strong>Llegada — Aeropuerto Eleftherios Venizelos, Atenas</strong>
+      <small>24 junio 2026 · al mediodía · traslado incluido</small>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="city-card">
+      <div class="card-line"></div>
+      <div class="city-dot"></div>
+      <div class="city-dates">
+        <div class="day-num">24</div>
+        <div class="month-label">Jun</div>
+      </div>
+      <div class="city-body">
+        <div class="city-name">Volos</div>
+        <div class="city-meta">24 de junio — 27 de junio, 2026</div>
+        <div class="city-badge">4 días</div>
+      </div>
+    </div>
+
+    <div class="city-card">
+      <div class="card-line"></div>
+      <div class="city-dot"></div>
+      <div class="city-dates">
+        <div class="day-num">28</div>
+        <div class="month-label">Jun</div>
+      </div>
+      <div class="city-body">
+        <div class="city-name">Ioannina</div>
+        <div class="city-meta">28 de junio — 1 de julio, 2026</div>
+        <div class="city-badge">4 días</div>
+      </div>
+    </div>
+
+    <div class="city-card">
+      <div class="card-line"></div>
+      <div class="city-dot"></div>
+      <div class="city-dates">
+        <div class="day-num">02</div>
+        <div class="month-label">Jul</div>
+      </div>
+      <div class="city-body">
+        <div class="city-name">Aigio — Patra</div>
+        <div class="city-meta">2 de julio — 6 de julio, 2026</div>
+        <div class="city-badge">5 días</div>
+      </div>
+    </div>
+
+    <div class="city-card">
+      <div class="city-dot"></div>
+      <div class="city-dates">
+        <div class="day-num">07</div>
+        <div class="month-label">Jul</div>
+      </div>
+      <div class="city-body">
+        <div class="city-name">Monemvasi</div>
+        <div class="city-meta">7 — 8 de julio, 2026</div>
+        <div class="city-badge">1 día</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="arrival-card" style="margin-top: 1.5rem; margin-bottom: 0.5rem;">
+    <div class="arrival-icon">✈️</div>
+    <div class="arrival-text">
+      <strong>Regreso — Aeropuerto de Atenas</strong>
+      <small>8 de julio 2026 · fin de gira</small>
+    </div>
+  </div>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-dot"></div>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- MONTAJE -->
+  <div class="section-label">Montaje — Cuadros musicales</div>
+
+  <div class="cuadros-grid">
+
+    <div class="cuadro-card">
+      <div class="cuadro-header andino">
+        <div class="cuadro-title">Cuadro Andino</div>
+      </div>
+      <ul class="cuadro-songs">
+        <li><span class="song-num">01</span> Para desenguayabar</li>
+        <li><span class="song-num">02</span> Ojo al toro</li>
+        <li><span class="song-num">03</span> Buscarruidos</li>
+        <li><span class="song-num">04</span> Garzón, yo soy de ti</li>
+        <li><span class="song-num">05</span> San Pedro en el Espinal</li>
+      </ul>
+    </div>
+
+    <div class="cuadro-card">
+      <div class="cuadro-header antioquia">
+        <div class="cuadro-title">Cuadro Antioquia</div>
+      </div>
+      <ul class="cuadro-songs">
+        <li><span class="song-num">01</span> Porro antioqueño</li>
+        <li><span class="song-num">02</span> Parranda antioqueña</li>
+        <li><span class="song-num">03</span> Baile bravo</li>
+        <li><span class="song-num">04</span> Carrataplan</li>
+        <li><span class="song-num">05</span> Pasillo boliao</li>
+      </ul>
+    </div>
+
+    <div class="cuadro-card">
+      <div class="cuadro-header caribe">
+        <div class="cuadro-title">Cuadro Caribe</div>
+      </div>
+      <ul class="cuadro-songs">
+        <li><span class="song-num">01</span> Cumbia juliana</li>
+        <li><span class="song-num">02</span> <span class="pending">Bullerengue (pendiente)</span></li>
+        <li><span class="song-num">03</span> Pescador</li>
+        <li><span class="song-num">04</span> La bruja</li>
+        <li><span class="song-num">05</span> <span class="pending">Puya (pendiente)</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-dot"></div>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- INSTRUMENTOS -->
+  <div class="section-label">Instrumentos</div>
+
+  <div class="instruments-grid">
+    <div class="instrument-tag">Tambora</div>
+    <div class="instrument-tag">Llamador</div>
+    <div class="instrument-tag">Clarinete</div>
+    <div class="instrument-tag">Alegre</div>
+    <div class="instrument-tag">Maracas</div>
+    <div class="instrument-tag">Guitarra</div>
+    <div class="instrument-tag add-pending">+ pendientes por agregar</div>
+  </div>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-dot"></div>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- MUSICOS -->
+  <div class="section-label">Músicos</div>
+
+  <div class="musicos-list">
+
+    <div class="musico-row">
+      <div class="musico-avatar">AV</div>
+      <div>
+        <div class="musico-name">Andrés Ávila</div>
+        <div class="musico-role">Director musical</div>
+      </div>
+      <div class="director-badge">Director</div>
+    </div>
+
+    <div class="musico-row">
+      <div class="musico-avatar">TA</div>
+      <div>
+        <div class="musico-name">Talo</div>
+      </div>
+    </div>
+
+    <div class="musico-row">
+      <div class="musico-avatar">CR</div>
+      <div>
+        <div class="musico-name">Cristian</div>
+      </div>
+    </div>
+
+    <div class="musico-row" style="opacity: 0.55;">
+      <div class="musico-avatar">—</div>
+      <div><div class="musico-name musico-anon">Músico por confirmar</div></div>
+    </div>
+    <div class="musico-row" style="opacity: 0.45;">
+      <div class="musico-avatar">—</div>
+      <div><div class="musico-name musico-anon">Músico por confirmar</div></div>
+    </div>
+    <div class="musico-row" style="opacity: 0.35;">
+      <div class="musico-avatar">—</div>
+      <div><div class="musico-name musico-anon">Músico por confirmar</div></div>
+    </div>
+    <div class="musico-row" style="opacity: 0.25;">
+      <div class="musico-avatar">—</div>
+      <div><div class="musico-name musico-anon">Músico por confirmar</div></div>
+    </div>
+    <div class="musico-row" style="opacity: 0.2;">
+      <div class="musico-avatar">—</div>
+      <div><div class="musico-name musico-anon">Músico por confirmar</div></div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>París — Audioguía</title>
+    <style>
+      :root {
+        --bg: #f7f2ec;
+        --paper: rgba(255, 252, 247, 0.88);
+        --ink: #3d322b;
+        --muted: #7a6a5f;
+        --accent: #b77963;
+        --line: rgba(122, 106, 95, 0.18);
+        --shadow: 0 18px 50px rgba(84, 63, 51, 0.12);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(232, 212, 200, 0.8),
+            transparent 34%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(244, 231, 223, 0.9),
+            transparent 28%
+          ),
+          linear-gradient(180deg, #fbf7f3 0%, var(--bg) 100%);
+        line-height: 1.9;
+      }
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 56px 24px 96px;
+      }
+      .hero {
+        padding: 40px 28px 32px;
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.72),
+          rgba(255, 252, 247, 0.92)
+        );
+        box-shadow: var(--shadow);
+        border-radius: 32px;
+      }
+      .eyebrow {
+        margin: 0 0 10px;
+        font-size: 0.78rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(2.4rem, 6vw, 4.6rem);
+        line-height: 1.05;
+        font-weight: 500;
+      }
+      .subtitle {
+        margin: 16px 0 0;
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 1.03rem;
+      }
+      .content {
+        margin-top: 28px;
+        display: grid;
+        gap: 20px;
+      }
+      .section {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px 24px;
+        box-shadow: 0 10px 30px rgba(84, 63, 51, 0.06);
+      }
+      .section h2 {
+        margin: 0 0 18px;
+        font-size: 1.35rem;
+        color: var(--accent);
+      }
+      .section p {
+        margin: 0;
+        white-space: pre-line;
+        font-size: 1.04rem;
+      }
+      .footer-note {
+        margin-top: 22px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Audioguía</p>
+        <h1>París</h1>
+        <p class="subtitle">
+          Guion completo dividido por días, con narrativa continua y contexto
+          histórico profundo.
+        </p>
+      </header>
+
+      <section class="content">
+        <article class="section">
+          <h2>Día 1 — Introducción a París</h2>
+          <p>
+            Bienvenidas a París. Antes de empezar, quiero que entiendas algo
+            importante. París no es solo una ciudad bonita. París es una
+            construcción política, cultural y simbólica. Durante siglos, fue el
+            centro del pensamiento europeo. Aquí nacieron ideas que cambiaron el
+            mundo. La Ilustración. La Revolución Francesa. Los derechos humanos.
+            Pero también fue una ciudad de reyes, de desigualdad… y de
+            conflictos. París no es perfecta. Y justamente por eso… es tan
+            importante. Ahora, mientras caminas, quiero que observes algo. Las
+            calles. Son amplias. Rectas. Ordenadas. Pero esto no siempre fue
+            así. En el siglo XIX, el barón Haussmann rediseñó completamente la
+            ciudad. Destruyó barrios medievales… para crear el París que vemos
+            hoy. Así que esta ciudad no solo tiene historia… también tiene
+            decisiones fuertes detrás. Y eso es lo que la hace tan interesante.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Día 1 — Torre Eiffel</h2>
+          <p>
+            Ahora estás frente a uno de los símbolos más reconocidos del mundo.
+            La Torre Eiffel. Construida en 1889 para la Exposición Universal. Y
+            algo curioso. Al principio… la gente la odiaba. Artistas e
+            intelectuales la consideraban horrible. Decían que arruinaba la
+            ciudad. Pero con el tiempo… se convirtió en su símbolo. Esto dice
+            mucho sobre París. Es una ciudad que cambia. Que discute. Y que
+            redefine lo que considera bello.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Día 2 — Museo del Louvre</h2>
+          <p>
+            Ahora entras a uno de los museos más importantes del mundo. El
+            Louvre. Pero antes de ser museo… fue un palacio real. Aquí vivieron
+            reyes de Francia. Hasta que la Revolución Francesa cambió todo. El
+            poder dejó de pertenecer a la monarquía… y pasó al pueblo. Y este
+            lugar… se transformó en museo. Eso es clave. El arte dejó de ser
+            exclusivo… y se volvió público. Dentro encontrarás obras como la
+            Mona Lisa. Pero más allá de las obras… lo importante es entender el
+            espacio. Este lugar representa el cambio de una sociedad.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Día 2 — Notre Dame</h2>
+          <p>
+            Ahora estás frente a Notre Dame. Uno de los mejores ejemplos del
+            gótico francés. Construida entre los siglos XII y XIV. Observa las
+            torres. Las gárgolas. Los vitrales. Todo tiene una función. El
+            gótico buscaba elevar la mirada. Llevarla hacia lo divino. Después
+            del incendio de 2019… este lugar tomó un nuevo significado. Ya no es
+            solo historia. Es memoria viva.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Día 3 — Montmartre</h2>
+          <p>
+            Ahora estás en Montmartre. Un barrio distinto. Más bohemio. Más
+            artístico. Aquí vivieron artistas como Picasso. Y aquí el ritmo
+            cambia. París deja de ser monumental… y se vuelve íntima. En lo alto
+            está la Basílica del Sagrado Corazón. Desde allí, la vista de la
+            ciudad es completa. Y entiendes algo. París no es solo lo que ves de
+            cerca. También es cómo se extiende.
+          </p>
+        </article>
+
+        <article class="section">
+          <h2>Cierre</h2>
+          <p>
+            París es una ciudad que se reinventa constantemente. Que cuestiona.
+            Que evoluciona. No es solo historia. Es pensamiento. Y después de
+            recorrerla… te das cuenta de algo. París no busca agradar. Busca
+            provocar. Y tal vez… eso es lo que la hace inolvidable.
+          </p>
+        </article>
+      </section>
+
+      <p class="footer-note">
+        Archivo de París dentro de la colección de audioguías.
+      </p>
+    </main>
+  </body>
+</html>

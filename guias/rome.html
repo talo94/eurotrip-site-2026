@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roma — Contexto histórico</title>
+    <style>
+      :root {
+        --bg: #f7f2ec;
+        --paper: rgba(255, 252, 247, 0.88);
+        --ink: #3d322b;
+        --muted: #7a6a5f;
+        --accent: #b77963;
+        --line: rgba(122, 106, 95, 0.18);
+        --shadow: 0 18px 50px rgba(84, 63, 51, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(232, 212, 200, 0.8),
+            transparent 34%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(244, 231, 223, 0.9),
+            transparent 28%
+          ),
+          linear-gradient(180deg, #fbf7f3 0%, var(--bg) 100%);
+        line-height: 1.9;
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 56px 24px 96px;
+      }
+
+      .hero {
+        padding: 40px 28px 32px;
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.72),
+          rgba(255, 252, 247, 0.92)
+        );
+        box-shadow: var(--shadow);
+        border-radius: 32px;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(183, 121, 99, 0.08),
+          transparent 45%
+        );
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        font-size: 0.78rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.4rem, 6vw, 4.6rem);
+        line-height: 1.05;
+        font-weight: 500;
+      }
+
+      .subtitle {
+        margin: 16px 0 0;
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 1.03rem;
+      }
+
+      .content {
+        margin-top: 28px;
+        display: grid;
+        gap: 20px;
+      }
+
+      .section {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px 24px;
+        box-shadow: 0 10px 30px rgba(84, 63, 51, 0.06);
+        backdrop-filter: blur(8px);
+      }
+
+      .section h2 {
+        margin: 0 0 18px;
+        font-size: 1.35rem;
+        font-weight: 500;
+        color: var(--accent);
+      }
+
+      .section p {
+        margin: 0;
+        white-space: pre-line;
+        font-size: 1.04rem;
+      }
+
+      .footer-note {
+        margin-top: 22px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          padding: 24px 14px 56px;
+        }
+        .hero {
+          padding: 28px 20px 24px;
+          border-radius: 24px;
+        }
+        .section {
+          padding: 22px 18px;
+          border-radius: 22px;
+        }
+        .section p {
+          font-size: 0.98rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Audioguía</p>
+        <h1>Roma</h1>
+        <p class="subtitle">
+          Contexto histórico general de la ciudad, en formato narrado y listo
+          para integrarse a la colección web de guías.
+        </p>
+      </header>
+
+      <section class="content">
+        <article class="section">
+          <h2>Roma y su contexto histórico</h2>
+          <p>
+            Bienvenidas a Roma. Antes de empezar a caminar, quiero que hagas
+            algo muy simple, pero muy importante. Mira a tu alrededor… y trata
+            de olvidar por un momento la idea de que estás en una ciudad
+            turística. Porque Roma no es una ciudad que se pueda entender como
+            un conjunto de monumentos. Roma es el resultado de más de dos mil
+            años de historia acumulada en el mismo lugar. No sustituida. No
+            borrada. Acumulada. Y eso cambia completamente la forma en que debes
+            escuchar este recorrido. Roma no se construyó una vez. Roma se
+            reconstruyó… una y otra vez. Cada época dejó su capa. Y ninguna
+            desapareció del todo. Por eso aquí puedes ver una columna romana
+            junto a una iglesia medieval… y al lado, una plaza barroca. Todo al
+            mismo tiempo. Todo coexistiendo. La historia de Roma, tal como la
+            conocemos, empieza con un relato que es mitad mito, mitad identidad.
+            En el año 753 antes de Cristo, según la tradición, la ciudad fue
+            fundada por Rómulo. Un personaje legendario, criado por una loba
+            junto a su hermano Remo. No importa tanto si el relato es
+            históricamente exacto. Lo importante es lo que representa. Roma se
+            pensó a sí misma desde el inicio como una ciudad destinada a
+            existir. A crecer. A dominar. En sus primeros siglos, Roma fue una
+            monarquía. Pequeña, limitada, rodeada de otros pueblos. Pero en el
+            año 509 antes de Cristo ocurre algo que cambia completamente su
+            destino. Roma expulsa a su último rey. Y se convierte en una
+            república. Esto es fundamental. Porque aquí aparece una de las ideas
+            más influyentes de toda la historia política de Occidente. Un
+            sistema donde el poder no pertenece a una sola persona. Sino que se
+            distribuye. Aparecen instituciones como el Senado. Magistrados
+            elegidos. Cónsules que gobernaban por periodos limitados. No era una
+            democracia moderna. Pero era algo nuevo. Un intento de equilibrio.
+            De evitar que una sola persona concentrara demasiado poder. Y sin
+            embargo… ese sistema, que en teoría buscaba estabilidad, contenía en
+            su interior el germen de su propia transformación. Porque Roma no se
+            quedó quieta. Roma creció. Y creció rápido. Primero dominó la
+            península itálica. Después, tras una serie de guerras decisivas
+            contra Cartago, extendió su influencia por todo el Mediterráneo.
+            Grecia, Hispania, el norte de África, parte de Asia Menor… Roma dejó
+            de ser una ciudad. Se convirtió en una potencia. Pero aquí aparece
+            una paradoja importante. La República estaba diseñada para una
+            ciudad-estado. No para un imperio. Y cuanto más crecía Roma… más
+            difícil era mantener ese equilibrio político. Más tensiones. Más
+            ambición. Más conflictos internos. Es en este contexto donde aparece
+            una de las figuras más decisivas de toda esta historia. Julio César.
+            César no fue el primero en desafiar el sistema. Pero sí fue quien lo
+            llevó más lejos. Era un general brillante. Un estratega. Un político
+            con enorme carisma. Y alguien que entendió perfectamente cómo
+            funcionaba el poder en Roma. Después de sus campañas en la Galia,
+            regresó a Roma con un ejército leal y una popularidad enorme. Y en
+            el año 49 antes de Cristo, tomó una decisión que cambió todo. Cruzó
+            el río Rubicón. Ese gesto, aparentemente simple, era en realidad una
+            declaración de guerra. Porque ningún general podía entrar en Italia
+            con su ejército. Al hacerlo, César rompió las reglas. Y con eso…
+            rompió el equilibrio de la República. Lo que siguió fue una guerra
+            civil. Que terminó con César en el poder. Fue nombrado dictador. No
+            por días. No por meses. Por tiempo indefinido. Y ahí es donde la
+            historia se vuelve inevitable. Porque Roma podía tolerar poder. Pero
+            no podía tolerar la idea de un rey. El 15 de marzo del año 44 antes
+            de Cristo, los llamados Idus de marzo, César fue asesinado. En el
+            Senado. Por un grupo de conspiradores que creían que estaban
+            salvando la República. Entre ellos estaba Marco Junio Bruto. Pero
+            aquí está lo importante. Su muerte no salvó nada. Desató otra guerra
+            civil. Más violencia. Más caos. Y finalmente, el sistema que habían
+            intentado proteger… desapareció. El heredero político de César,
+            Augusto, tomó el control. Y con él comienza una nueva etapa. El
+            Imperio Romano. A diferencia de César, Augusto fue más sutil. No se
+            proclamó rey. No destruyó las instituciones. Las mantuvo. Pero
+            vaciadas de poder. El Senado siguió existiendo. Pero ya no decidía.
+            El poder estaba en una sola figura. El emperador. Y así, Roma entró
+            en su periodo de mayor esplendor. Durante los siglos siguientes, el
+            Imperio Romano se convirtió en la estructura política más grande y
+            compleja de su tiempo. Construyó carreteras que conectaban
+            continentes. Acueductos que llevaban agua a ciudades enteras.
+            Edificios que aún hoy siguen en pie. Pero más allá de lo material,
+            Roma dejó algo aún más duradero. El derecho. La organización
+            política. La idea misma de ciudadanía. Todo eso… sigue presente hoy.
+            Pero ningún sistema es eterno. A partir del siglo III, el imperio
+            empieza a debilitarse. Crisis internas. Problemas económicos.
+            Presión de pueblos externos. Y en el año 476, el Imperio Romano de
+            Occidente cae. Roma deja de ser capital política. Pero no
+            desaparece. Se transforma. Porque en ese mismo espacio, comienza a
+            consolidarse otro tipo de poder. El poder religioso. Roma se
+            convierte en el centro del cristianismo. El Papa se establece como
+            figura central. Y así, una ciudad que había sido el corazón de un
+            imperio pagano… se convierte en el corazón de la Iglesia católica.
+            Eso es lo que hace que Roma sea única. No es solo una ciudad con
+            historia. Es una ciudad que ha sido muchas cosas completamente
+            distintas… en el mismo lugar. Imperio. República. Centro religioso.
+            Ciudad medieval. Capital del Renacimiento. Y cada una de esas etapas
+            sigue presente. Por eso, cuando caminas por Roma, no estás viendo
+            ruinas. Estás viendo decisiones. Conflictos. Transformaciones. Estás
+            viendo cómo una ciudad fue capaz de cambiar… sin dejar de ser ella
+            misma. Y esa es la clave para entender lo que viene después. Porque
+            a partir de aquí, cuando entres al Coliseo, cuando camines por el
+            Foro, cuando veas el Panteón o una plaza barroca… no estás viendo
+            lugares aislados. Estás viendo capítulos de una historia que nunca
+            se detuvo. Roma no es pasado. Roma es continuidad. Y ahora sí… estás
+            lista para recorrerla.
+          </p>
+        </article>
+      </section>
+
+      <p class="footer-note">
+        Primer archivo de Roma. Los otros audios de la ciudad pueden seguir la
+        misma estética y estructura.
+      </p>
+    </main>
+  </body>
+</html>
